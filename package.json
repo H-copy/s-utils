@@ -1,0 +1,16 @@
+{
+  "name": "root",
+  "private": true,
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  },
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "pkgs/*"
+    ],
+    "nohoist": []
+  },
+  "author": "copy-left",
+  "license": "ISC"
+}

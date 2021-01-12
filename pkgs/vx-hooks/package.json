@@ -1,0 +1,62 @@
+{
+  "name": "vx-hooks",
+  "version": "1.0.1",
+  "description": "vue 3.0 hook tool",
+  "main": "lib/index.js",
+  "module": "lib/index.esm.js",
+  "scripts": {
+    "build:@micro/hooks": "npm run build",
+    "dev:@micro/hooks": "npm run dev",
+    "dev:rollup": "set NODE_ENV=developemnt&& rollup -c rollup.config.js -w",
+    "build:rollup": "rm -fr lib && set NODE_ENV=production&& rollup -c rollup.config.js",
+    "dev": "gulp --color --gulpfile ./scripts/dev.js",
+    "build": "gulp -cwd ./ --color --gulpfile ./scripts/build.js",
+    "concat:types": "api-extractor run",
+    "test": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/H-copy/vx-hook.git"
+  },
+  "keywords": [
+    "micro",
+    "hooks",
+    "vue3.0",
+    "typescript"
+  ],
+  "files": [
+    "lib",
+    "package.json"
+  ],
+  "types": "lib/index.d.ts",
+  "typings": "lib/index.d.ts",
+  "devDependencies": {
+    "@microsoft/api-extractor": "^7.10.4",
+    "@types/jest": "^26.0.20",
+    "@typescript-eslint/eslint-plugin": "^4.6.1",
+    "@typescript-eslint/parser": "^4.4.1",
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-exec": "^5.0.0",
+    "jest": "^26.6.3",
+    "rollup": "^2.32.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-eslint": "^7.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-typescript2": "^0.27.3",
+    "ts-jest": "^26.4.4",
+    "typescript": "^4.0.3",
+    "vue": "^3.0.2"
+  },
+  "peerDependencies": {
+    "vue": ">=3.0.0"
+  },
+  "private": true,
+  "author": "copy-left",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/H-copy/vx-hook/issues"
+  },
+  "dependencies": {}
+}

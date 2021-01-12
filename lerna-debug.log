@@ -1,0 +1,23 @@
+0 silly argv {
+0 silly argv   _: [ 'create' ],
+0 silly argv   lernaVersion: '3.22.1',
+0 silly argv   '$0': 'C:\\Users\\Administrator\\AppData\\Roaming\\npm\\node_modules\\lerna\\cli.js',
+0 silly argv   name: 'vx-hooks'
+0 silly argv }
+1 notice cli v3.22.1
+2 verbose rootPath F:\mony\pc\super-util
+3 info versioning independent
+4 warn ENOREMOTE No git remote found, skipping repository property
+5 error Error: canceled
+5 error     at Interface.<anonymous> (C:\Users\Administrator\AppData\Roaming\npm\node_modules\lerna\node_modules\_read@1.0.7@read\lib\read.js:66:13)
+5 error     at Interface.emit (events.js:315:20)
+5 error     at Interface._ttyWrite (readline.js:875:16)
+5 error     at ReadStream.onkeypress (readline.js:213:10)
+5 error     at ReadStream.emit (events.js:315:20)
+5 error     at emitKeys (internal/readline/utils.js:345:14)
+5 error     at emitKeys.next (<anonymous>)
+5 error     at ReadStream.onData (readline.js:1144:36)
+5 error     at ReadStream.emit (events.js:315:20)
+5 error     at addChunk (_stream_readable.js:309:12)
+5 error     at readableAddChunk (_stream_readable.js:284:9)
+5 error     at ReadStream.Readable.push (_stream_readable.js:223:10)
