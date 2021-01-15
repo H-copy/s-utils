@@ -1,0 +1,21 @@
+{
+  "presets": [
+    [
+     "@babel/preset-env",
+      {
+        "modules": false,
+        "useBuiltIns": "usage",
+        "corejs": "2.6.10"
+      }
+    ],
+  ],
+  "plugins": [
+    ["@babel/plugin-transform-runtime"],
+    "@babel/plugin-proposal-class-properties"
+    // "@babel/proposal-class-properties",
+    // "@babel/proposal-object-rest-spread"
+  ],
+  "ignore": [
+      "node_modules/**"
+    ]
+}
