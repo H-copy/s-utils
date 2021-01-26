@@ -1,6 +1,6 @@
 {
   "name": "vx-tools",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "js tools pkg",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
@@ -22,7 +22,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/H-copy/vx-hook.git"
+    "url": "git+https://github.com/H-copy/s-utils/tree/main/pkgs/vx-tools"
   },
   "types": "lib/index.d.ts",
   "typings": "lib/index.d.ts",
