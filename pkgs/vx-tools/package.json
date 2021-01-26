@@ -1,7 +1,7 @@
 {
   "name": "vx-tools",
   "version": "0.0.1",
-  "description": "",
+  "description": "js tools pkg",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
   "scripts": {
@@ -20,9 +20,12 @@
     "lib",
     "package.json"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/H-copy/vx-hook.git"
+  },
   "types": "lib/index.d.ts",
   "typings": "lib/index.d.ts",
-  "private": true,
   "author": "copy-left",
   "license": "MIT",
   "devDependencies": {
