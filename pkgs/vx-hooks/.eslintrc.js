@@ -16,6 +16,7 @@ module.exports = {
     "plugin:@typescript-eslint/recommended",
   ],
   rules: {
-    '@typescript-eslint/type-annotation-spacing': 'off'
+    '@typescript-eslint/type-annotation-spacing': 'off',
+    '@typescript-eslint/no-explicit-any': 'off'
 	}
 };

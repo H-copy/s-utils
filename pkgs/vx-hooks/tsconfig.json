@@ -17,7 +17,7 @@
     "declarationMap": false, 
     "declarationDir": "types",
     "lib": ["esnext", "dom"],
-    "types": ["node", "jest", "dom"]
+    "types": ["node", "jest"]
   },
   "include": [
     "src/*"

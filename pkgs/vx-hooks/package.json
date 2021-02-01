@@ -1,6 +1,6 @@
 {
   "name": "vx-hooks",
-  "version": "1.0.1",
+  "version": "2.0.0-beta",
   "description": "vue 3.0 hook tool",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/H-copy/vx-hook.git"
+    "url": "https://github.com/H-copy/s-utils/tree/main/pkgs/vx-hooks"
   },
   "keywords": [
     "micro",
@@ -56,7 +56,7 @@
   "author": "copy-left",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/H-copy/vx-hook/issues"
+    "url": "https://github.com/H-copy/s-utils/issues"
   },
   "dependencies": {}
 }
