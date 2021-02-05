@@ -52,7 +52,6 @@
   "peerDependencies": {
     "vue": ">=3.0.0"
   },
-  "private": true,
   "author": "copy-left",
   "license": "MIT",
   "bugs": {
