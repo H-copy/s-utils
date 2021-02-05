@@ -1,92 +1,80 @@
 import {
   computed,
   ref,
-  watch
 } from 'vue'
 import {
-  useToggle
-} from '../useToggle'
-import {
   useBool
-} from '../useBool'
+} from '../useBool/index'
 
 /* eslint-disable  @typescript-eslint/no-explicit-any */
-export type MouseWheelDirection = 'up' | 'down'
+export type MouseWheelDirectionY = 'up' | 'down' | 'unchange'
+export type MouseWheelDirectionX = 'left' | 'right' | 'unchange'
+export type MouseWheelDirectionZ = 'out' | 'in' | 'unchange'
+export type MouseWheelType = 'px' | 'line' | 'page' | 'undefined'
+export function MouseWheelTypeMap(n: number): MouseWheelType {
+  switch (n) {
+    case 0:
+      return 'px'
+    case 1:
+      return 'line'
+    case 2:
+      return 'page'
+    default:
+      return 'undefined'
+  }
+}
 
-/**
- * 鼠标滚轮
- * @module hooks
- * @returns { Object }
- * - wheelEvent 滚轮事件对象
- * - direction 滚动方向 'up' | 'down'
- * - isUp 滚动方向是否为上
- * 
- * - setUp() direction 设置为 'up'
- * - setDown() direction 设置为 'down'
- * - onMousewheel() 鼠标滚轮事件
- * 
- * - disabled 是否响应滚轮事件
- * - canUse disabled 设置为 false 开启 onMousewheel
- * - unUse disabled 设置为 true 关闭 onMousewheel
- * 
- * @example
- * 
- * <a-input-number
- *  @focus.stop='onFocus'
- *  @blur.stop='onBlur'
- *  v-model:value='valueProxy'
- *  >
- * </a-input-number>
- * 
- * 
- * {
- *   props: {
- *    value: { type: Number, default: 0 },
- *    step: { type: Number, default: 1 } 
- *   },
- *   setup(props, ctx){
- *      const valueProxy = computed<number>({
- *    get(){
- *       return props.value
- *    },
- *      set(d: number){
- *       ctx.emit('update:value', d)
- *      }
- *    })
- *
- *    const {
- *      isUp,
- *      canUse,
- *      unUse,
- *      wheelEvent,
- *      onMousewheel
- *    } = useMousewheel()
- *
- *    watch(wheelEvent, () =>  {
- *      isUp.value ? valueProxy.value -= props.step : valueProxy.value += props.step
- *    })
- *    
- *    const onFocus = canUse
- *    const onBlur = unUse
- *    
- *    return { ... }
- *  }
- * }
- * 
- */
+const buildCheck = (u: string, d: string, c: string) => (n: number) => {
+  if (n < 0) {
+    return u
+  }
+  if (n > 0) {
+    return d
+  }
+  return c
+}
+
+const TYPES = [
+  'up',
+  'down',
+  'left',
+  'right',
+  'out',
+  'in',
+  'unchange',
+]
+
+const typeCheck = (s: string, t?: string) => {
+  if (t) {
+    return TYPES.includes(s) && s === t
+  }
+  return TYPES.includes(s)
+}
+
+const isUp = (s: string) => typeCheck(s, 'up')
+const isDown = (s: string) => typeCheck(s, 'down')
+const isLeft = (s: string) => typeCheck(s, 'left')
+const isRight = (s: string) => typeCheck(s, 'right')
+const isOut = (s: string) => typeCheck(s, 'out')
+const isIn = (s: string) => typeCheck(s, 'in')
+const isUnchange = (s: string) => typeCheck(s, 'unchange')
+
 export function useMousewheel() {
-  const wheelEvent = ref<any>()
-  const { state: direction, setLeft: setUp, setRight: setDown } = useToggle('up', 'down')
+  const wheelEvent = ref<WheelEvent>({
+    deltaY: 0,
+    deltaX: 0,
+    deltaZ: 0,
+    deltaMode: 0
+  } as WheelEvent)
+
+  const wheelType = computed(() => MouseWheelTypeMap(wheelEvent.value.deltaMode))
+  const directionY = computed(() => buildCheck('up', 'down', 'unchange')(wheelEvent.value.deltaY))
+  const directionX = computed(() => buildCheck('left', 'right', 'unchange')(wheelEvent.value.deltaX))
+  const directionZ = computed(() => buildCheck('out', 'in', 'unchange')(wheelEvent.value.deltaZ))
+
   const { state: disabled, setTrue: unUse, setFalse: canUse } = useBool()
-  const isUp = computed(() => direction.value === 'up')
 
-  watch(wheelEvent, (newVal) => {
-    if (newVal) {
-      newVal.deltaY as number < 0 ? setUp() : setDown()
-    }
-  })
-
-  const onMousewheel = (e: any) => {
+  const onMousewheel = (e: WheelEvent) => {
     if (disabled.value) {
       return
     }
@@ -94,16 +82,25 @@ export function useMousewheel() {
   }
 
   return {
-    wheelEvent,
-    direction,
     isUp,
-    setUp,
-    setDown,
+    isDown,
+    isLeft,
+    isRight,
+    isOut,
+    isIn,
+    isUnchange,
+    wheelType,
+    wheelEvent,
+
+    directionY,
+    directionX,
+    directionZ,
+
+    onMousewheel,
+    typeCheck,
 
     disabled,
-    canUse,
     unUse,
-
-    onMousewheel
+    canUse
   }
 }
