@@ -3,5 +3,5 @@
 
 
 ## 包
-- [vx-hooks](./pkgs/vx-hooks/README.md) vue3.0 hook
+- [vx-hooks](https://h-copy.github.io/s-utils/index.html) vue3.0 hook API
 - [vx-tools](./pkgs/vx-tools/README.md) js tools
