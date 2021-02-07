@@ -4,6 +4,8 @@
   "description": "vue 3.0 hook tool",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
+  "types": "lib/index.d.ts",
+  "typings": "lib/index.d.ts",
   "scripts": {
     "build:@micro/hooks": "npm run build",
     "dev:@micro/hooks": "npm run dev",
@@ -28,8 +30,6 @@
     "lib",
     "package.json"
   ],
-  "types": "lib/index.d.ts",
-  "typings": "lib/index.d.ts",
   "devDependencies": {
     "@microsoft/api-extractor": "^7.10.4",
     "@types/jest": "^26.0.20",
@@ -57,5 +57,8 @@
   "bugs": {
     "url": "https://github.com/H-copy/s-utils/issues"
   },
-  "dependencies": {}
+  "dependencies": {
+    "dts-gen": "^0.6.0",
+    "global": "^4.4.0"
+  }
 }

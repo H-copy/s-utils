@@ -4,7 +4,7 @@
   "bundledPackages": [],
   "dtsRollup": {
     "enabled": true,
-    "untrimmedFilePath": "./lib/index.d.ts"
+    "publicTrimmedFilePath": "./lib/index.d.ts"
   },
   "apiReport": {
     "enabled": false,
