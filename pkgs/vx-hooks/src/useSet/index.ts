@@ -1,17 +1,34 @@
 import { ref, Ref } from 'vue'
 
 /**
- * Set hooks
- * @param { Array } initVal 初始数据
- * @summary 对Set类型做的hook封装，利用Set的幂等性
- * @returns
+ * useSet API
+ * 
  * - set Set容器
  * - add 添加项
  * - remove 移除项
  * - reset 重置
  * - setInit 设置初始值
  * - update 更新 Set容器以及初始值
- * @exports 
+ */
+export interface UseSetAPI<T>{
+  set: Ref<Set<T>>
+  add: (val: T) => Set<T>
+  remove: (val: T) => Set<T>
+  reset: () => Set<T>
+  setInit: (initVal: Iterable<T>) => Set<T>
+  update: (initVal: Iterable<T>) => void
+}
+
+/**
+ * Set 类型 hooks
+ * 
+ * @param initVal - 初始数据
+ * @summary 
+ * 对Set类型做的hook封装，利用Set的幂等性
+ * 
+ * @exports
+ * 
+ * ``` ts
  * const [ set, utils ] = useSet([ 1, 2 ])
  * 
  * 添加
@@ -33,15 +50,9 @@ import { ref, Ref } from 'vue'
  * 遍历
  * const newList = [...set.value].map(num => num + 1)  ==> [ 2, 3 ]
  * 
+ * ```
  */
-export function useSet<T>(initVal:Iterable<T> = []):{
-  set: Ref<Set<T>>;
-  add: (val: T) => Set<T>;
-  remove: (val: T) => Set<T>;
-  reset: () => Set<T>;
-  setInit: (initVal: Iterable<T>) => Set<T>;
-  update: (initVal: Iterable<T>) => void;
-}{
+export function useSet<T>(initVal:Iterable<T> = []): UseSetAPI<T>{
 
   const initSet:Ref<Set<T>> = ref(new Set(initVal))
   const set:Ref<Set<T>> = ref(new Set(initVal))

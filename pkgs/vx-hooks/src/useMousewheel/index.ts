@@ -6,11 +6,22 @@ import {
 } from 'vue'
 
 /* eslint-disable  @typescript-eslint/no-explicit-any */
+
+/** Y轴方向  */
 export type MouseWheelDirectionY = 'up' | 'down' | 'unchange'
+/** X轴方向  */
 export type MouseWheelDirectionX = 'left' | 'right' | 'unchange'
+/** Z轴方向  */
 export type MouseWheelDirectionZ = 'out' | 'in' | 'unchange'
+/** 值单位类型  */
 export type MouseWheelType = 'px' | 'line' | 'page' | 'undefined'
 
+/**
+ * 滚轮事件值单位类型断言
+ * @param n 类型值
+ * @returns 
+ * 类型名称
+ */
 export function mouseWheelTypeMap(n: number): MouseWheelType {
   switch (n) {
     case 0:
@@ -59,7 +70,33 @@ const isOut = (s: string) => typeCheck(s, 'out')
 const isIn = (s: string) => typeCheck(s, 'in')
 const isUnchange = (s: string) => typeCheck(s, 'unchange')
 
-export function useMousewheel():{
+/**
+ * 鼠标滚轮 hook 返回 API 
+ * 
+ * ### 方向断言
+ * - isUp(s: string)  
+ * - isDown(s: string)
+ * - isLeft(s: string)
+ * - isRight(s: string)
+ * - isOut(s: string)
+ * - isIn(s: string)
+ * - isUnchange(s: string)
+ * - typeCheck(s: string, t?: string)
+ * 
+ * ### 方向
+ * - directionY
+ * - directionX
+ * - directionZ
+ * 
+ * ### 开关
+ * - disabeld 是否可用
+ * - canUse()
+ * - unUse()
+ * 
+ * ### 事件
+ * - onMousewheel()
+ */
+export interface UseMousewheelAPI{
   isUp: (s: string) => boolean
   isDown: (s: string) => boolean
   isLeft: (s: string) => boolean
@@ -77,7 +114,54 @@ export function useMousewheel():{
   directionY: ComputedRef<MouseWheelDirectionY>
   directionX: ComputedRef<MouseWheelDirectionX>
   directionZ: ComputedRef<MouseWheelDirectionZ>
-} {
+}
+
+/**
+ * 鼠标滚轮hook
+ * @example
+ * ``` ts
+ * <template>
+ *    <input 
+ *    v-model='value' 
+ *    @foucs='canUse'
+ *    @blur='unUse'
+ *    @mousewheel='onMousewheel' />
+ *  </template>
+ *  <script>
+ *
+ *  export default {
+ *    setup(){
+ *      const {
+ *        isUp,
+ *        isDown,
+ *        directionY,
+ *        wheelEvent,
+ *        unUse,
+ *        canUse,
+ *        onMousewheel,
+ *      }
+ *      const count = ref(0)
+ *      
+ *      watch(wheelEvent, () => { *
+ *        if(isUp(directionY.value)){
+ *          count.value -= 1
+ *        } *
+ *        if(isDown(directionY.value)){
+ *          count.value += 1
+ *        }
+ *        
+ *      })
+ *      
+ *      return {
+ *        onMousewheel,
+ *        unUse,
+ *        canUse,
+ *      }
+ *    }
+ *  }
+ * ```
+ */
+export function useMousewheel(): UseMousewheelAPI {
   const wheelEvent = ref({
     deltaY: 0,
     deltaX: 0,
@@ -100,7 +184,7 @@ export function useMousewheel():{
     }
     wheelEvent.value = e
   }
-
+  
   return {
     isUp,
     isDown,

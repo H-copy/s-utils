@@ -61,37 +61,108 @@ export declare interface IuseTimeout {
     setCallback: (callback: Fn) => Fn;
 }
 
+/** X轴方向  */
 export declare type MouseWheelDirectionX = 'left' | 'right' | 'unchange';
 
+/** Y轴方向  */
 export declare type MouseWheelDirectionY = 'up' | 'down' | 'unchange';
 
+/** Z轴方向  */
 export declare type MouseWheelDirectionZ = 'out' | 'in' | 'unchange';
 
+/** 值单位类型  */
 export declare type MouseWheelType = 'px' | 'line' | 'page' | 'undefined';
 
+/**
+ * 滚轮事件值单位类型断言
+ * @param n 类型值
+ * @returns
+ * 类型名称
+ */
 export declare function mouseWheelTypeMap(n: number): MouseWheelType;
 
 /**
  * 布尔值切换
  * @param { boolean } initStatus 初始值
  * @returns { object }
- *  - state 当前状态
- *  - setTrue 设为true
- *  - setFalse 设置false
- *  - toggle 状态切换
+
  */
-export declare function useBool(initStatus?: boolean): {
-    state: Ref<boolean>;
-    setTrue: () => void;
-    setFalse: () => void;
-    toggle: (value?: boolean | undefined) => void;
-};
+export declare function useBool(initStatus?: boolean): UseBoolAPI;
 
 /**
- * @name Map类型hook
- * @param { Array } initVal 初始Map配置
+ * useBool API
+ */
+export declare interface UseBoolAPI {
+    /** 当前状态 */
+    state: Ref<boolean>;
+    /** state 设为 true */
+    setTrue: () => void;
+    /** state 设为 fasel */
+    setFalse: () => void;
+    /**
+     * 状态切换
+     *
+     * @example
+     * ``` ts
+     * toggle() => 当前状态的反值
+     * toggle(true)
+     * toggle(false)
+     * ```
+     */
+    toggle: (value?: boolean | undefined) => void;
+}
+
+/**
+ * Map类型 hook
+ * @param initVal - 初始Map配置
+ * @typeParam T - map key 类型
+ * @typeParam U - map value 类型
  *
- * @returns { Object }
+ * @example
+ * ``` ts
+ * <template>
+ *   <div class="home">
+ *     <div>
+ *         <input v-model='newName' />
+ *         <button @click='add'>
+ *             add
+ *       </button>
+ *       <ul>
+ *           <li v-for='name of names' :key='name' @click='remove(name)' >
+ *                 {{ name }}
+ *         </li>
+ *       </ul>
+ *     </div>
+ *   </div>
+ * </template>
+ * <script>
+ * import { ref, computed } from 'vue'
+ * import { useMap } from 'vx-hook'
+ * export default {
+ *   setup(){
+ *     const newName = ref('')
+ *     const { map, get, set, remove } = useMap([
+ *       [ 'Rogen', 1 ],
+ *       [ 'Coco', 2 ],
+ *       [ 'Jim', 3 ]
+ *     ])
+ *     const names = computed(() => [ ...map.keys() ])
+ *     const add = () => set(newName, names.value.length)
+ *
+ *     return {
+ *       newName,
+ *       names,
+ *       remove
+ *     }
+ *   }
+ * }
+ * </script>
+ * ```
+ */
+export declare function useMap<T, U>(initVal?: Iterable<readonly [T, U]>): UseMapAPI<T, U>;
+
+/**
+ * useMap API
  * - map Map容器
  * - get 获取值
  * - set 设置值
@@ -100,7 +171,7 @@ export declare function useBool(initStatus?: boolean): {
  * - reset 将值还原为初始值
  * - resetInit 重设初始值
  */
-export declare function useMap<T, U>(initVal?: Iterable<readonly [T, U]>): {
+export declare interface UseMapAPI<T, U> {
     map: Ref<Map<T, U>>;
     get: (key: T) => U | undefined;
     set: (key: T, val: U) => void;
@@ -108,9 +179,82 @@ export declare function useMap<T, U>(initVal?: Iterable<readonly [T, U]>): {
     remove: (key: T) => void;
     reset: () => Map<T, U>;
     resetInit: (newMap: Iterable<readonly [T, U]>) => any;
-};
+}
 
-export declare function useMousewheel(): {
+/**
+ * 鼠标滚轮hook
+ * @example
+ * ``` ts
+ * <template>
+ *    <input
+ *    v-model='value'
+ *    @foucs='canUse'
+ *    @blur='unUse'
+ *    @mousewheel='onMousewheel' />
+ *  </template>
+ *  <script>
+ *
+ *  export default {
+ *    setup(){
+ *      const {
+ *        isUp,
+ *        isDown,
+ *        directionY,
+ *        wheelEvent,
+ *        unUse,
+ *        canUse,
+ *        onMousewheel,
+ *      }
+ *      const count = ref(0)
+ *
+ *      watch(wheelEvent, () => { *
+ *        if(isUp(directionY.value)){
+ *          count.value -= 1
+ *        } *
+ *        if(isDown(directionY.value)){
+ *          count.value += 1
+ *        }
+ *
+ *      })
+ *
+ *      return {
+ *        onMousewheel,
+ *        unUse,
+ *        canUse,
+ *      }
+ *    }
+ *  }
+ * ```
+ */
+export declare function useMousewheel(): UseMousewheelAPI;
+
+/**
+ * 鼠标滚轮 hook 返回 API
+ *
+ * ### 方向断言
+ * - isUp(s: string)
+ * - isDown(s: string)
+ * - isLeft(s: string)
+ * - isRight(s: string)
+ * - isOut(s: string)
+ * - isIn(s: string)
+ * - isUnchange(s: string)
+ * - typeCheck(s: string, t?: string)
+ *
+ * ### 方向
+ * - directionY
+ * - directionX
+ * - directionZ
+ *
+ * ### 开关
+ * - disabeld 是否可用
+ * - canUse()
+ * - unUse()
+ *
+ * ### 事件
+ * - onMousewheel()
+ */
+export declare interface UseMousewheelAPI {
     isUp: (s: string) => boolean;
     isDown: (s: string) => boolean;
     isLeft: (s: string) => boolean;
@@ -128,7 +272,7 @@ export declare function useMousewheel(): {
     directionY: ComputedRef<MouseWheelDirectionY>;
     directionX: ComputedRef<MouseWheelDirectionX>;
     directionZ: ComputedRef<MouseWheelDirectionZ>;
-};
+}
 
 /**
  * Set hooks
