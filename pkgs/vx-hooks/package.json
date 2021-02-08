@@ -1,6 +1,6 @@
 {
   "name": "vx-hooks",
-  "version": "2.1.0-beta",
+  "version": "2.1.1-beta",
   "description": "vue 3.0 hook tool",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
