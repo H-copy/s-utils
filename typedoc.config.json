@@ -1,0 +1,10 @@
+{
+  "entryPoints" : [
+    "./pkgs/vx-hooks/src",
+    "./pkgs/vx-tools/src"
+  ],
+  "tsconfig": "./tsconfig-base.json",
+  "exclude": "**/__test__/*.ts",
+  "out": "./docs",
+  "excludeInternal": true
+}

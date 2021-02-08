@@ -1,3 +1,9 @@
+/**
+ * 鼠标滚动
+ * @packageDocumentation
+ * @module vx-hooks/useMousewheel
+ */
+
 import {
   computed,
   ref,

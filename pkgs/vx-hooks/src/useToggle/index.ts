@@ -1,3 +1,8 @@
+/**
+ * 左右值切换
+ * @packageDocumentation
+ * @module vx-hooks/useToggle
+ */
 import {
   ref,
   computed,

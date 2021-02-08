@@ -1,3 +1,8 @@
+/**
+ * 常用工具函数
+ * @packageDocumentation
+ * @module vx-tools
+ */
 export * from './asyncFormat'
 export * from './joinUrlParams'
 export * from './objectFilter'

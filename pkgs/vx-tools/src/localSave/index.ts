@@ -1,8 +1,7 @@
 /**
  * 本地缓存包装函数
- * @author copy-left
- * @time 2020-11-10
- * 
+ * @packageDocumentation
+ * @module vx-tools/localSave
  */
 
 let registed = false 
@@ -19,6 +18,7 @@ let registed = false
  * 此时可以使用原生方法
  * 
  * @example
+ * ``` ts
  * import { registSaveFn } from '@micro/utils'
  * registSaveFn() //全局调用一次
  *  
@@ -26,6 +26,7 @@ let registed = false
  * localStorage.$setItem(saveKey, { name: 'copy', sex: 'man' })
  * const user = localStorage.$getItem(saveKey)
  * console.log(user.name)
+ * ```
  */
 export function registSaveFn():void {
   if(registed){return}

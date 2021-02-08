@@ -1,4 +1,8 @@
-
+/**
+ * 定时轮询
+ * @packageDocumentation
+ * @module vx-hooks/useTimeout
+ */
 import { ref, Ref } from 'vue'
 import { useBool } from '../useBool'
 

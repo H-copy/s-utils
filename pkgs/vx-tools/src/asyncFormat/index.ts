@@ -1,5 +1,11 @@
 /**
- * async 格式化包装
+ * 异步包装
+ * @packageDocumentation
+ * @module vx-tools/asyncFormat
+ */
+
+/**
+ * async 异步包装
  * @param { promise } promise 被包装promise
  * @returns { pormise } 包装后的promise
  * @summary 将 aysnce await 错误作为返回值的处理方式

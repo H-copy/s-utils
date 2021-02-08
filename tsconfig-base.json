@@ -1,0 +1,33 @@
+{
+  "ts-node": {
+    "transpileOnly": true,
+    "compilerOptions": {
+      "module": "commonjs"
+    }
+  },
+  "compilerOptions": {
+    "baseUrl": ".",
+    "sourceMap": false,
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "allowJs": false,
+    "strict": true,
+    "noUnusedLocals": false,
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "removeComments": false,
+    "declaration": true,
+    "declarationMap": false, 
+    "lib": ["esnext", "dom"],
+    "types": ["node", "jest"]
+  },
+  "include": [
+    "./pkgs/**/src"
+  ],
+  "exclude": [
+    "./pkgs/**/node_modules",
+    "./pkgs/**lib"    
+  ]
+}

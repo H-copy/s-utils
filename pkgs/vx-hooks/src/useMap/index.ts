@@ -1,3 +1,8 @@
+/**
+ * Map类型操作
+ * @packageDocumentation
+ * @module vx-hooks/useMap
+ */
 import { ref, Ref } from 'vue'
 
 /**
