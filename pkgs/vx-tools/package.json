@@ -10,7 +10,10 @@
     "dev": "set NODE_ENV=developemnt&& rollup -c rollup.config.js -w",
     "build": "rm -fr lib && set NODE_ENV=production&& rollup -c rollup.config.js",
     "concat:types": "api-extractor run",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "doc:build": "typedoc --options ./typedoc.config.json",
+    "doc:watch": "typedoc --watch --options ./typedoc.config.json",
+    "doc": "http-server ./docs -o -p 7000"
   },
   "keywords": [
     "micro",
