@@ -1,5 +1,13 @@
 /**
  * vue3.0 hook 工具包
+ * 
+ * ## hooks
+ * - useToggle
+ * - useBool
+ * - useMap
+ * - useSet
+ * - useTimeout
+ * - useMousewheel
  * @packageDocumentation
  * @module vx-hooks
  */
