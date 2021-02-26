@@ -27,7 +27,7 @@ export function objectFilter<T extends {[key:string]: any}, U extends keyof T>(k
   return keys.reduce((acc, next: keyof T) => {
     return {
       ...acc,
-      [next]: source[next] || undefined
+      [next]: source[next]
     }
   }, {} as T)
 }
