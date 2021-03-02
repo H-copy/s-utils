@@ -1,11 +1,22 @@
 /**
  * vue3.0 hook 工具包
+ *
+ * ## hooks
+ * - useToggle
+ * - useBool
+ * - useMap
+ * - useSet
+ * - useTimeout
+ * - useMousewheel
+ * - useDebounce
+ * - useDebounceFn
  * @packageDocumentation
  * @module vx-hooks
  */
 
 import { ComputedRef } from 'vue';
 import { Ref } from 'vue';
+import { WatchStopHandle } from 'vue';
 
 export declare type Fn = (...args: any[]) => any;
 
@@ -73,6 +84,102 @@ export declare interface UseBoolAPI {
      * ```
      */
     toggle: (value?: boolean | undefined) => void;
+}
+
+/**
+ * 防抖值
+ * @summary
+ * 通过监听观察对象的变化，延时修改目标值
+ * @tips
+ * 1. 因为使用了 watch，所以只在观察对象值变化时，触发更新
+ * 2. 内部对 wait 缩短的 0.01s, 因为回调触发是在延时时间结束后，如果我们
+ * 配合在 async await 中使用，我们直接配置 wait 作为间隔时间，将无法观察到
+ * 值的变化.
+ * @param watchFn watch 被监听函数 / 取值函数
+ * @param wait { 1 } 延时时常(s)
+ *
+ * @example
+ * ``` ts
+ *
+ * const watchVal = ref(0)
+ * const { state, watchStop, cancel } = useDebounce(watchVal)
+ *
+ * watchval.value = 1
+ * watchval.value = 2
+ * watchval.value = 3
+ *
+ * console.log(state.value) // 0
+ *
+ * // 延时更新
+ * // delay 1s
+ * console.log(state.value) // 3
+ *
+ *
+ * // 取消某次赋值
+ * watchval.value = 4
+ * cancel()
+ *
+ * //delay 1s
+ * console.log(state.value) // 3
+ * watchval.value = 4
+ * //delay 1s
+ * console.log(state.value) // 4
+ *
+ *
+ * // 中断监听
+ * watchStop()
+ * watchval.value = 5
+ * // delay 2s
+ * console.log(state.value) // 4
+ *
+ * ```
+ */
+export declare function useDebounce<T>(watchFn: (() => T) | Ref<T> | ComputedRef<T>, wait?: number): useDebounceAPI<T>;
+
+/**
+ * useDebounceAPI
+ * @typeParam T 值类型
+ */
+export declare interface useDebounceAPI<T> {
+    /** 延时值 */
+    state: Ref<T>;
+    /** 中断设值监听 */
+    watchStop: WatchStopHandle;
+    /** 取消一次设值 */
+    cancel: () => void;
+}
+
+/**
+ * 防抖
+ * @param fn 回调函数
+ * @param wait { 1 } 延时时常(s)
+ *
+ * @example
+ * ``` ts
+ *
+ * const submit = async() => { console.log('onsubmit') }
+ * const { run, cancel } = useDebounceFn(submit, 1)
+ *
+ * run()
+ * run()
+ * run()
+ *
+ * // delay 1s
+ * => onsubmit
+ *
+ * ```
+ *
+ */
+export declare function useDebounceFn<T extends (...args: any) => any>(fn: T, wait?: number): useDebounceFnAPI;
+
+/**
+ * useDebounceFn API
+ */
+export declare interface useDebounceFnAPI {
+    /** 触发延时回调 */
+    run: (...args: any) => void;
+    /** 取消回调 */
+    cancel: () => void;
 }
 
 /**
