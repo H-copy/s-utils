@@ -1,7 +1,7 @@
 /**
  * 防抖
  * @packageDocumentation
- * @module vx-hooks/useBool
+ * @module vx-hooks/useDebounceFn
  */
 import { ref } from 'vue'
 
@@ -23,15 +23,15 @@ export interface useDebounceFnAPI {
  * @example
  * ``` ts
  * 
- * const submit = async() => { console.log('onsubmit') }
+ * const submit = async(d) => { console.log(d) }
  * const { run, cancel } = useDebounceFn(submit, 1)
  * 
- * run()
- * run()
- * run()
+ * run(1)
+ * run(2)
+ * run(3)
  * 
  * // delay 1s
- * => onsubmit
+ * => 3
  * 
  * ```
  * 

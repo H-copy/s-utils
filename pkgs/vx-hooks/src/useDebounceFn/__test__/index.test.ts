@@ -8,7 +8,7 @@ import {
 
 describe('useDebounceFn', () =>{
 
-  test('in 2s, 3 times', async () => {
+  test('time line', async () => {
     const cb = jest.fn()
     const wait = 1
     const { run } = useDebounceFn(cb, wait)
@@ -17,10 +17,11 @@ describe('useDebounceFn', () =>{
     run(2)
     run(3)
 
-    await dely(wait/2)
+    await dely(wait * 0.9)
+    run(4)
     expect(cb.mock.calls.length).toBe(0)
 
-    await dely(wait/2)
+    await dely(wait)
     expect(cb.mock.calls.length).toBe(1)
     
   })

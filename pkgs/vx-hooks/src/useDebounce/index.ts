@@ -1,7 +1,7 @@
 /**
  * 防抖值
  * @packageDocumentation
- * @module vx-hooks/useBool
+ * @module vx-hooks/useDebounce
  */
 import { ref, watch, Ref, ComputedRef, WatchStopHandle } from 'vue'
 import { useDebounceFn } from '../useDebounceFn'
