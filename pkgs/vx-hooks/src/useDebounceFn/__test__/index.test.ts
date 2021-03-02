@@ -50,7 +50,5 @@ describe('useDebounceFn', () =>{
     run()
     await dely(wait)
     expect(cb.mock.calls.length).toBe(2)
-    
   })
-  
 })

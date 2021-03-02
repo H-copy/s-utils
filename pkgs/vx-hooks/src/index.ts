@@ -8,6 +8,8 @@
  * - useSet
  * - useTimeout
  * - useMousewheel
+ * - useDebounce
+ * - useDebounceFn
  * @packageDocumentation
  * @module vx-hooks
  */
@@ -17,3 +19,5 @@ export * from './useMap'
 export * from './useSet'
 export * from './useTimeout'
 export * from './useMousewheel'
+export * from './useDebounce'
+export * from './useDebounceFn'
