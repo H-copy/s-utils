@@ -13,7 +13,7 @@
  *  => step 1
  *  => step 2
  */
-const pipe = (...fns:Function[]) => (arg?:any) => fns.reduce((acc, fn) => fn(acc), arg)
+const pipe = (...fns: Function[]) => (arg?: any) => fns.reduce((acc, fn) => fn(acc), arg)
 
 /**
  * 柯里化
@@ -29,15 +29,21 @@ const pipe = (...fns:Function[]) => (arg?:any) => fns.reduce((acc, fn) => fn(acc
  * addOne(11) ==> 12
  * 
  */
-const curry = <T extends Function >(fn:T, preArgs = [] as any[]) => (...args:any) => {
-    return pipe(
-      () => [[...preArgs, ...args], fn], // 初始调用时, preArgs 设置默认值，保证数组的正常结构
-      ([data, fn]: any[]) => data.length === fn.length ? fn(...data) : curry(fn, data)
-    )()
- }
+const curry = <T extends Function>(fn: T, preArgs = [] as any[]) => (...args: any) => {
+  return pipe(
+    () => [[...preArgs, ...args], fn], // 初始调用时, preArgs 设置默认值，保证数组的正常结构
+    ([data, fn]: any[]) => data.length === fn.length ? fn(...data) : curry(fn, data)
+  )()
+}
 
+const dely = (time: number) => {
+  return new Promise((reslove) => {
+    setTimeout(reslove, time * 1000)
+  })
+}
 
 export {
   pipe,
-  curry
+  curry,
+  dely
 }
