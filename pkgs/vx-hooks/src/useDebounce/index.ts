@@ -68,7 +68,7 @@ export interface useDebounceAPI<T>{
  * 
  * ```
  */
-export function useDebounce<T>(watchFn: (() => T) | Ref<T> | ComputedRef<T>, wait: number = 1): useDebounceAPI<T> {
+export function useDebounce<T>(watchFn: (() => T) | Ref<T> | ComputedRef<T>, wait = 1): useDebounceAPI<T> {
   const state = typeof watchFn === 'function' ?  ref(watchFn()) as Ref<T> : ref(watchFn.value) as Ref<T>
 
   const { run: setState, cancel } = useDebounceFn((d: T) => state.value = d, wait - 0.01)

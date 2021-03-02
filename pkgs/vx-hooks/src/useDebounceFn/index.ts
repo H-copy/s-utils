@@ -18,7 +18,7 @@ export interface useDebounceFnAPI {
 /**
  * 防抖
  * @param fn 回调函数 
- * @param wait 延时时常(s)
+ * @param wait { 1 } 延时时常(s)
  * 
  * @example
  * ``` ts
@@ -36,7 +36,7 @@ export interface useDebounceFnAPI {
  * ```
  * 
  */
-export function useDebounceFn<T extends (...args:any) => any>(fn: T, wait: number = 1): useDebounceFnAPI {
+export function useDebounceFn<T extends (...args:any) => any>(fn: T, wait = 1): useDebounceFnAPI {
   const timer = ref<any>()
 
   const cancel = () => {
