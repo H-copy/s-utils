@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>vx-hooks/useThrottle | s-utils</title>
+	<title>vx-hooks/useLocalStorageState | s-utils</title>
 	<meta name="description" content="Documentation for s-utils">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -55,10 +55,10 @@
 					<a href="../modules.html">s-utils</a>
 				</li>
 				<li>
-					<a href="vx_hooks_usethrottle.html">vx-hooks/useThrottle</a>
+					<a href="vx_hooks_uselocalstoragestate.html">vx-hooks/useLocalStorageState</a>
 				</li>
 			</ul>
-			<h1>Module vx-hooks/useThrottle</h1>
+			<h1>Module vx-hooks/useLocalStorageState</h1>
 		</div>
 	</div>
 </header>
@@ -68,7 +68,7 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>节流值</p>
+						<p>localStorage 缓存</p>
 					</div>
 				</div>
 			</section>
@@ -77,15 +77,9 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Interfaces</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter"><a href="../interfaces/vx_hooks_usethrottle.usethrottleapi.html" class="tsd-kind-icon">Use<wbr>ThrottleAPI</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section ">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter"><a href="vx_hooks_usethrottle.html#usethrottle" class="tsd-kind-icon">use<wbr>Throttle</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter"><a href="vx_hooks_uselocalstoragestate.html#uselocalstoragestate" class="tsd-kind-icon">use<wbr>Local<wbr>Storage<wbr>State</a></li>
 							</ul>
 						</section>
 					</div>
@@ -94,41 +88,26 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Functions</h2>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
-					<a name="usethrottle" class="tsd-anchor"></a>
-					<h3>use<wbr>Throttle</h3>
+					<a name="uselocalstoragestate" class="tsd-anchor"></a>
+					<h3>use<wbr>Local<wbr>Storage<wbr>State</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">use<wbr>Throttle&lt;T&gt;<span class="tsd-signature-symbol">(</span>watchFn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Ref</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ComputedRef</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span>, wait<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/vx_hooks_usethrottle.usethrottleapi.html" class="tsd-signature-type" data-tsd-kind="Interface">UseThrottleAPI</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">use<wbr>Local<wbr>Storage<wbr>State&lt;T&gt;<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, defaultValue<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/vx_hooks_usestoragestateapi.usestoragestateapi.html" class="tsd-signature-type" data-tsd-kind="Interface">UseStorageStateAPI</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/fd91b04/pkgs/vx-hooks/src/useThrottle/index.ts#L48">vx-hooks/src/useThrottle/index.ts:48</a></li>
+									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/fd91b04/pkgs/vx-hooks/src/useLocalStorageState/index.ts#L16">vx-hooks/src/useLocalStorageState/index.ts:16</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>节流值</p>
+									<p>localStorage 缓存</p>
 								</div>
 								<dl class="tsd-comment-tags">
 									<dt>summary</dt>
-									<dd><p>使用节流函数更新对应响应值, 时间间隔将小于配置时间  时间间隔 =&gt; 等待时间 - 0.01s</p>
-									</dd>
-									<dt>example</dt>
-									<dd><pre><code class="language-ts">
-<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">watchVal</span><span style="color: #000000"> = </span><span style="color: #795E26">ref</span><span style="color: #000000">(</span><span style="color: #098658">0</span><span style="color: #000000">)</span>
-<span style="color: #0000FF">const</span><span style="color: #000000"> { </span><span style="color: #0070C1">state</span><span style="color: #000000"> } = </span><span style="color: #795E26">useThrottle</span><span style="color: #000000">(</span><span style="color: #001080">watchVal</span><span style="color: #000000">, </span><span style="color: #098658">2</span><span style="color: #000000">)</span>
-
-<span style="color: #001080">watchval</span><span style="color: #000000">.</span><span style="color: #001080">value</span><span style="color: #000000"> = </span><span style="color: #098658">1</span>
-<span style="color: #008000">// dely 1</span>
-<span style="color: #001080">watchval</span><span style="color: #000000">.</span><span style="color: #001080">value</span><span style="color: #000000"> = </span><span style="color: #098658">2</span>
-<span style="color: #001080">watchval</span><span style="color: #000000">.</span><span style="color: #001080">value</span><span style="color: #000000"> = </span><span style="color: #098658">3</span>
-<span style="color: #001080">watchval</span><span style="color: #000000">.</span><span style="color: #001080">value</span><span style="color: #000000"> = </span><span style="color: #098658">4</span>
-<span style="color: #008000">// dely 1</span>
-<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #001080">state</span><span style="color: #000000">.</span><span style="color: #001080">value</span><span style="color: #000000">)</span>
-<span style="color: #0000FF">=&gt;</span><span style="color: #000000"> </span><span style="color: #098658">1</span>
-
-</code></pre>
+									<dd><p>useStorageState 的localStorage柯里化,
+										具体使用查看 useStorageState</p>
 									</dd>
 								</dl>
 							</div>
@@ -136,27 +115,24 @@
 							<ul class="tsd-type-parameters">
 								<li>
 									<h4>T</h4>
-									<div class="tsd-comment tsd-typography">
-										<p>监听值类型</p>
-									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>watchFn: <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Ref</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ComputedRef</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5>key: <span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>监听对象</p>
+										<p>缓存字段</p>
 									</div>
 								</li>
 								<li>
-									<h5>wait: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 1</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> defaultValue: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>延时时常(s)</p>
+										<p>初始时缓存为空值时，返回的默认值</p>
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="../interfaces/vx_hooks_usethrottle.usethrottleapi.html" class="tsd-signature-type" data-tsd-kind="Interface">UseThrottleAPI</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/vx_hooks_usestoragestateapi.usestoragestateapi.html" class="tsd-signature-type" data-tsd-kind="Interface">UseStorageStateAPI</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -186,7 +162,7 @@
 					<li class=" tsd-kind-module">
 						<a href="vx_hooks_usedebouncefn.html">vx-<wbr>hooks/use<wbr>Debounce<wbr>Fn</a>
 					</li>
-					<li class=" tsd-kind-module">
+					<li class="current tsd-kind-module">
 						<a href="vx_hooks_uselocalstoragestate.html">vx-<wbr>hooks/use<wbr>Local<wbr>Storage<wbr>State</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -207,7 +183,7 @@
 					<li class=" tsd-kind-module">
 						<a href="vx_hooks_usesetref.html">vx-<wbr>hooks/use<wbr>Set<wbr>Ref</a>
 					</li>
-					<li class="current tsd-kind-module">
+					<li class=" tsd-kind-module">
 						<a href="vx_hooks_usethrottle.html">vx-<wbr>hooks/use<wbr>Throttle</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -244,11 +220,8 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/vx_hooks_usethrottle.usethrottleapi.html" class="tsd-kind-icon">Use<wbr>ThrottleAPI</a>
-					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="vx_hooks_usethrottle.html#usethrottle" class="tsd-kind-icon">use<wbr>Throttle</a>
+						<a href="vx_hooks_uselocalstoragestate.html#uselocalstoragestate" class="tsd-kind-icon">use<wbr>Local<wbr>Storage<wbr>State</a>
 					</li>
 				</ul>
 			</nav>

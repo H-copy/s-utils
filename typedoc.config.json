@@ -4,7 +4,7 @@
     "./pkgs/vx-tools/src"
   ],
   "tsconfig": "./tsconfig-base.json",
-  "exclude": "**/__test__/*.ts",
+  "exclude": "**/__test__/**.ts",
   "out": "./docs",
   "excludeInternal": true
 }

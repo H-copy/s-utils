@@ -103,7 +103,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/994c587/pkgs/vx-hooks/src/useMap/index.ts#L75">vx-hooks/src/useMap/index.ts:75</a></li>
+									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/fd91b04/pkgs/vx-hooks/src/useMap/index.ts#L75">vx-hooks/src/useMap/index.ts:75</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -120,9 +120,9 @@
 <span style="color: #000000">            </span><span style="color: #001080">add</span>
 <span style="color: #000000">      &lt;/</span><span style="color: #001080">button</span><span style="color: #000000">&gt;</span>
 <span style="color: #000000">      &lt;</span><span style="color: #267F99">ul</span><span style="color: #000000">&gt;</span>
-<span style="color: #000000">          &lt;</span><span style="color: #001080">li</span><span style="color: #000000"> </span><span style="color: #001080">v</span><span style="color: #000000">-</span><span style="color: #001080">for</span><span style="color: #000000">=</span><span style="color: #A31515">&#039;name of names&#039;</span><span style="color: #000000"> :</span><span style="color: #001080">key</span><span style="color: #000000">=</span><span style="color: #A31515">&#039;name&#039;</span><span style="color: #000000"> @</span><span style="color: #001080">click</span><span style="color: #000000">=</span><span style="color: #A31515">&#039;remove(name)&#039;</span><span style="color: #000000"> &gt;</span>
-<span style="color: #000000">                {{ </span><span style="color: #001080">name</span><span style="color: #000000"> }}</span>
-<span style="color: #000000">        &lt;/</span><span style="color: #001080">li</span><span style="color: #000000">&gt;</span>
+<span style="color: #000000">          &lt;</span><span style="color: #001080">li</span><span style="color: #000000"> </span><span style="color: #001080">v</span><span style="color: #000000">-</span><span style="color: #001080">for</span><span style="color: #000000">=</span><span style="color: #A31515">&#039;name of names&#039;</span><span style="color: #000000"> :</span><span style="color: #001080">key</span><span style="color: #000000">=</span><span style="color: #A31515">&#039;name&#039;</span><span style="color: #000000"> @</span><span style="color: #001080">click</span><span style="color: #000000">=</span><span style="color: #A31515">&#039;remove(name)&#039;</span><span style="color: #000000"> &gt; </span>
+<span style="color: #000000">                {{ </span><span style="color: #001080">name</span><span style="color: #000000"> }}     </span>
+<span style="color: #000000">        &lt;/</span><span style="color: #001080">li</span><span style="color: #000000">&gt;    </span>
 <span style="color: #000000">      &lt;/</span><span style="color: #001080">ul</span><span style="color: #000000">&gt;</span>
 <span style="color: #000000">    &lt;/</span><span style="color: #001080">div</span><span style="color: #000000">&gt;</span>
 <span style="color: #000000">  &lt;/</span><span style="color: #001080">div</span><span style="color: #000000">&gt;</span>
@@ -134,13 +134,13 @@
 <span style="color: #000000">  </span><span style="color: #795E26">setup</span><span style="color: #000000">(){</span>
 <span style="color: #000000">    </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">newName</span><span style="color: #000000"> = </span><span style="color: #795E26">ref</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;&#039;</span><span style="color: #000000">)</span>
 <span style="color: #000000">    </span><span style="color: #0000FF">const</span><span style="color: #000000"> { </span><span style="color: #0070C1">map</span><span style="color: #000000">, </span><span style="color: #0070C1">get</span><span style="color: #000000">, </span><span style="color: #0070C1">set</span><span style="color: #000000">, </span><span style="color: #0070C1">remove</span><span style="color: #000000"> } = </span><span style="color: #795E26">useMap</span><span style="color: #000000">([</span>
-<span style="color: #000000">      [ </span><span style="color: #A31515">&#039;Rogen&#039;</span><span style="color: #000000">, </span><span style="color: #098658">1</span><span style="color: #000000"> ],</span>
+<span style="color: #000000">      [ </span><span style="color: #A31515">&#039;Rogen&#039;</span><span style="color: #000000">, </span><span style="color: #098658">1</span><span style="color: #000000"> ],  </span>
 <span style="color: #000000">      [ </span><span style="color: #A31515">&#039;Coco&#039;</span><span style="color: #000000">, </span><span style="color: #098658">2</span><span style="color: #000000"> ],</span>
 <span style="color: #000000">      [ </span><span style="color: #A31515">&#039;Jim&#039;</span><span style="color: #000000">, </span><span style="color: #098658">3</span><span style="color: #000000"> ]</span>
 <span style="color: #000000">    ])</span>
 <span style="color: #000000">    </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">names</span><span style="color: #000000"> = </span><span style="color: #795E26">computed</span><span style="color: #000000">(() </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> [ ...</span><span style="color: #001080">map</span><span style="color: #000000">.</span><span style="color: #795E26">keys</span><span style="color: #000000">() ])</span>
 <span style="color: #000000">    </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #795E26">add</span><span style="color: #000000"> = () </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> </span><span style="color: #795E26">set</span><span style="color: #000000">(</span><span style="color: #001080">newName</span><span style="color: #000000">, </span><span style="color: #001080">names</span><span style="color: #000000">.</span><span style="color: #001080">value</span><span style="color: #000000">.</span><span style="color: #001080">length</span><span style="color: #000000">)</span>
-
+<span style="color: #000000">      </span>
 <span style="color: #000000">    </span><span style="color: #AF00DB">return</span><span style="color: #000000"> {</span>
 <span style="color: #000000">      </span><span style="color: #001080">newName</span><span style="color: #000000">,</span>
 <span style="color: #000000">      </span><span style="color: #001080">names</span><span style="color: #000000">,</span>
@@ -193,6 +193,9 @@
 						<a href="vx_hooks.html">vx-<wbr>hooks</a>
 					</li>
 					<li class=" tsd-kind-module">
+						<a href="vx_hooks_usestoragestateapi.html">vx-<wbr>hooks/<wbr>Use<wbr>Storage<wbr>StateAPI</a>
+					</li>
+					<li class=" tsd-kind-module">
 						<a href="vx_hooks_usebool.html">vx-<wbr>hooks/use<wbr>Bool</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -204,6 +207,9 @@
 					<li class=" tsd-kind-module">
 						<a href="vx_hooks_usedebouncefn.html">vx-<wbr>hooks/use<wbr>Debounce<wbr>Fn</a>
 					</li>
+					<li class=" tsd-kind-module">
+						<a href="vx_hooks_uselocalstoragestate.html">vx-<wbr>hooks/use<wbr>Local<wbr>Storage<wbr>State</a>
+					</li>
 					<li class="current tsd-kind-module">
 						<a href="vx_hooks_usemap.html">vx-<wbr>hooks/use<wbr>Map</a>
 					</li>
@@ -212,6 +218,9 @@
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="vx_hooks_useprevious.html">vx-<wbr>hooks/use<wbr>Previous</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="vx_hooks_usesessionstoragestate.html">vx-<wbr>hooks/use<wbr>Session<wbr>Storage<wbr>State</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="vx_hooks_useset.html">vx-<wbr>hooks/use<wbr>Set</a>

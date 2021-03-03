@@ -1,0 +1,46 @@
+Arguments: 
+  D:\exe\node\node.exe D:\exe\yarn\bin\yarn.js install --mutex network:42424 --non-interactive
+
+PATH: 
+  D:\project\s-utils\node_modules\.bin;D:\project\node_modules\.bin;D:\node_modules\.bin;D:\exe\node;D:\exe\cmder\vendor\bin;D:\exe\cmder\vendor\git-for-windows\cmd;D:\exe\cmder\vendor\conemu-maximus5\ConEmu\Scripts;D:\exe\cmder\vendor\conemu-maximus5;D:\exe\cmder\vendor\conemu-maximus5\ConEmu;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\exe\node\;D:\exe\yarn\bin\;D:\exe\GO\bin;C:\Users\copy-left\AppData\Local\Microsoft\WindowsApps;C:\Users\copy-left\AppData\Roaming\npm;D:\exe\Microsoft VS Code\bin;C:\Users\copy-left\AppData\Local\Yarn\bin;C:\Users\copy-left\go\bin;D:\exe\cmder\vendor\git-for-windows\mingw64\bin;D:\exe\cmder\vendor\git-for-windows\usr\bin;D:\exe\cmder
+
+Yarn version: 
+  1.22.5
+
+Node version: 
+  14.13.1
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: ENOENT: no such file or directory, copyfile 'C:\Users\copy-left\AppData\Local\Yarn\Cache\v6\npm-ansi-styles-3.2.1-41fbb20243e50b12be0f04b8dedbf07520ce841d-integrity\node_modules\ansi-styles\index.js' -> 'D:\project\s-utils\node_modules\@babel\highlight\node_modules\ansi-styles\index.js'
+
+npm manifest: 
+  {
+    "name": "s-utils",
+    "private": true,
+    "devDependencies": {
+      "lerna": "^3.22.1",
+      "typedoc": "^0.20.23"
+    },
+    "scripts": {
+      "doc:build": "typedoc --options ./typedoc.config.json",
+      "doc:watch": "typedoc --watch --options ./typedoc.config.json",
+      "doc": "http-server ./docs -o -p 7000"
+    },
+    "workspaces": {
+      "packages": [
+        "pkgs/*"
+      ],
+      "nohoist": []
+    },
+    "author": "copy-left",
+    "license": "ISC"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
