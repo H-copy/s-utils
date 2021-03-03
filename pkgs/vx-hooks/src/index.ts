@@ -21,7 +21,6 @@
  * - useDebounceFn
  * - useThrottle
  * - useThrottleFn
-
  * 
  * ### Cache
  * - useStrongeState
