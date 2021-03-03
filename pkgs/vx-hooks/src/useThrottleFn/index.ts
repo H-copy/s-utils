@@ -8,7 +8,7 @@ import { ref } from 'vue'
 /**
  * useThrottleFn API
  */
-export interface useThrottleFnAPI {
+export interface UseThrottleFnAPI {
   /** 调起回调 */
   run: (...args: any) => void;
   /** 取消回调执行 */
@@ -35,7 +35,7 @@ export interface useThrottleFnAPI {
  * 
  * ```
  */
-export function useThrottleFn<T extends (...args: any) => any>(fn: T, wait = 1):useThrottleFnAPI {
+export function useThrottleFn<T extends (...args: any) => any>(fn: T, wait = 1):UseThrottleFnAPI {
 
   const timer = ref<any>(null)
   const cleanTimer = () => {

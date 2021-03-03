@@ -1,7 +1,7 @@
 /**
  * 仿 react ref
  * @packageDocumentation
- * @module vx-hooks/useDebounce
+ * @module vx-hooks/useSetRef
  */
 
 import { ref, Ref } from 'vue'

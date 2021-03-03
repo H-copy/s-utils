@@ -9,7 +9,7 @@ import { useThrottleFn } from '../useThrottleFn'
 /**
  * useThrottle API
  */
-export interface useThrottleAPI<T>{
+export interface UseThrottleAPI<T>{
   /** 延时值 */
   state: Ref<T>;
   /** 延时值设置函数 */
@@ -45,7 +45,7 @@ export interface useThrottleAPI<T>{
  * 
  * ```
  */
-export function useThrottle<T>(watchFn: (() => T)| Ref<T> | ComputedRef<T>, wait = 1): useThrottleAPI<T> {
+export function useThrottle<T>(watchFn: (() => T)| Ref<T> | ComputedRef<T>, wait = 1): UseThrottleAPI<T> {
 
   const state = typeof watchFn === 'function' ?  ref(watchFn()) as Ref<T> : ref(watchFn.value) as Ref<T>
   const { run: setState, cancel } = useThrottleFn((data: T) => {state.value = data}, wait - 0.01)

@@ -10,6 +10,10 @@
  * - useMousewheel
  * - useDebounce
  * - useDebounceFn
+ * - useThrottle
+ * - useThrottleFn
+ * - useSetRef
+ * - usePrevious
  * @packageDocumentation
  * @module vx-hooks
  */
@@ -21,3 +25,7 @@ export * from './useTimeout'
 export * from './useMousewheel'
 export * from './useDebounce'
 export * from './useDebounceFn'
+export * from './useThrottle'
+export * from './useThrottleFn'
+export * from './useSetRef'
+export * from './usePrevious'
