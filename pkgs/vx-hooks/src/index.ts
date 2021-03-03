@@ -2,19 +2,32 @@
  * vue3.0 hook 工具包
  * 
  * ## hooks
+ * 
+ * ### State
  * - useToggle
  * - useBool
  * - useMap
  * - useSet
  * - useTimeout
- * - useMousewheel
+ * - useSetRef
+ * - usePrevious
+ * - useCounter
+ * 
+ * ### SideEffect
  * - useDebounce
  * - useDebounceFn
  * - useThrottle
  * - useThrottleFn
- * - useSetRef
- * - usePrevious
- * - useCounter
+
+ * 
+ * ### Cache
+ * - useStrongeState
+ * - useLocalStorageState
+ * - useSessionStorageState
+ * 
+ * ### Dom
+ * - useMousewheel
+ * 
  * @packageDocumentation
  * @module vx-hooks
  */
@@ -31,3 +44,6 @@ export * from './useThrottleFn'
 export * from './useSetRef'
 export * from './usePrevious'
 export * from './useCounter'
+export * from './useStrongeState'
+export * from './useLocalStorageState'
+export * from './useSessionStorageState'
