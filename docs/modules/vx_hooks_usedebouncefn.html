@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>vx-hooks/useToggle | s-utils</title>
+	<title>vx-hooks/useDebounceFn | s-utils</title>
 	<meta name="description" content="Documentation for s-utils">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -55,10 +55,10 @@
 					<a href="../modules.html">s-utils</a>
 				</li>
 				<li>
-					<a href="vx_hooks_usetoggle.html">vx-hooks/useToggle</a>
+					<a href="vx_hooks_usedebouncefn.html">vx-hooks/useDebounceFn</a>
 				</li>
 			</ul>
-			<h1>Module vx-hooks/useToggle</h1>
+			<h1>Module vx-hooks/useDebounceFn</h1>
 		</div>
 	</div>
 </header>
@@ -68,7 +68,7 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>左右值切换</p>
+						<p>防抖</p>
 					</div>
 				</div>
 			</section>
@@ -79,13 +79,13 @@
 						<section class="tsd-index-section ">
 							<h3>Interfaces</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter"><a href="../interfaces/vx_hooks_usetoggle.usetoggleapi.html" class="tsd-kind-icon">Use<wbr>ToggleAPI</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/vx_hooks_usedebouncefn.usedebouncefnapi.html" class="tsd-kind-icon">use<wbr>Debounce<wbr>FnAPI</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter"><a href="vx_hooks_usetoggle.html#usetoggle" class="tsd-kind-icon">use<wbr>Toggle</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter"><a href="vx_hooks_usedebouncefn.html#usedebouncefn" class="tsd-kind-icon">use<wbr>Debounce<wbr>Fn</a></li>
 							</ul>
 						</section>
 					</div>
@@ -94,35 +94,35 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Functions</h2>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
-					<a name="usetoggle" class="tsd-anchor"></a>
-					<h3>use<wbr>Toggle</h3>
+					<a name="usedebouncefn" class="tsd-anchor"></a>
+					<h3>use<wbr>Debounce<wbr>Fn</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">use<wbr>Toggle&lt;T, U&gt;<span class="tsd-signature-symbol">(</span>initStatus<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">boolean</span>, reverseValue<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">U</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/vx_hooks_usetoggle.usetoggleapi.html" class="tsd-signature-type" data-tsd-kind="Interface">UseToggleAPI</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">U</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">use<wbr>Debounce<wbr>Fn&lt;T&gt;<span class="tsd-signature-symbol">(</span>fn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, wait<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/vx_hooks_usedebouncefn.usedebouncefnapi.html" class="tsd-signature-type" data-tsd-kind="Interface">useDebounceFnAPI</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/994c587/pkgs/vx-hooks/src/useToggle/index.ts#L48">vx-hooks/src/useToggle/index.ts:48</a></li>
+									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/994c587/pkgs/vx-hooks/src/useDebounceFn/index.ts#L39">vx-hooks/src/useDebounceFn/index.ts:39</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>转换hook</p>
+									<p>防抖</p>
 								</div>
 								<dl class="tsd-comment-tags">
 									<dt>example</dt>
-									<dd><pre><code class="language-ts"><span style="color: #0000FF">const</span><span style="color: #000000"> { </span><span style="color: #0070C1">currentStatus</span><span style="color: #000000">, </span><span style="color: #0070C1">toggle</span><span style="color: #000000">, </span><span style="color: #0070C1">setLeft</span><span style="color: #000000"> </span><span style="color: #0070C1">as</span><span style="color: #000000"> </span><span style="color: #0070C1">open</span><span style="color: #000000">, </span><span style="color: #0070C1">setRight</span><span style="color: #000000"> </span><span style="color: #0070C1">as</span><span style="color: #000000"> </span><span style="color: #0070C1">close</span><span style="color: #000000"> } = </span><span style="color: #795E26">useToggle</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;open&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;close&#039;</span><span style="color: #000000">)</span>
+									<dd><pre><code class="language-ts">
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #795E26">submit</span><span style="color: #000000"> = </span><span style="color: #0000FF">async</span><span style="color: #000000">(</span><span style="color: #001080">d</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> { </span><span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #001080">d</span><span style="color: #000000">) }</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> { </span><span style="color: #0070C1">run</span><span style="color: #000000">, </span><span style="color: #0070C1">cancel</span><span style="color: #000000"> } = </span><span style="color: #795E26">useDebounceFn</span><span style="color: #000000">(</span><span style="color: #001080">submit</span><span style="color: #000000">, </span><span style="color: #098658">1</span><span style="color: #000000">)</span>
 
-<span style="color: #000000"> </span><span style="color: #001080">模板</span>
-<span style="color: #000000"> &lt;</span><span style="color: #267F99">div</span><span style="color: #000000">&gt;</span>
+<span style="color: #795E26">run</span><span style="color: #000000">(</span><span style="color: #098658">1</span><span style="color: #000000">)</span>
+<span style="color: #795E26">run</span><span style="color: #000000">(</span><span style="color: #098658">2</span><span style="color: #000000">)</span>
+<span style="color: #795E26">run</span><span style="color: #000000">(</span><span style="color: #098658">3</span><span style="color: #000000">)</span>
 
-<span style="color: #000000">     &lt;</span><span style="color: #267F99">h1</span><span style="color: #000000">&gt; {{ </span><span style="color: #001080">currentStatus</span><span style="color: #000000"> }} &lt;/</span><span style="color: #001080">h1</span><span style="color: #000000">&gt;</span>
-<span style="color: #000000">     &lt;</span><span style="color: #001080">button</span><span style="color: #000000"> @</span><span style="color: #001080">click</span><span style="color: #000000">=</span><span style="color: #A31515">&#039;toggle&#039;</span><span style="color: #000000">&gt; </span><span style="color: #001080">toggle</span><span style="color: #000000"> &lt;/</span><span style="color: #001080">button</span><span style="color: #000000">&gt;</span>
-<span style="color: #000000">     &lt;</span><span style="color: #001080">button</span><span style="color: #000000"> @</span><span style="color: #001080">click</span><span style="color: #000000">=</span><span style="color: #A31515">&#039;open&#039;</span><span style="color: #000000">&gt; </span><span style="color: #001080">open</span><span style="color: #000000"> &lt;/</span><span style="color: #001080">button</span><span style="color: #000000">&gt;</span>
-<span style="color: #000000">     &lt;</span><span style="color: #001080">button</span><span style="color: #000000"> @</span><span style="color: #001080">click</span><span style="color: #000000">=</span><span style="color: #A31515">&#039;close&#039;</span><span style="color: #000000">&gt; </span><span style="color: #001080">close</span><span style="color: #000000"> &lt;/</span><span style="color: #001080">button</span><span style="color: #000000">&gt;</span>
+<span style="color: #008000">// delay 1s</span>
+<span style="color: #0000FF">=&gt;</span><span style="color: #000000"> </span><span style="color: #098658">3</span>
 
-<span style="color: #000000"> &lt;/</span><span style="color: #001080">div</span><span style="color: #000000">&gt;</span>
 </code></pre>
 									</dd>
 								</dl>
@@ -130,34 +130,25 @@
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
 							<ul class="tsd-type-parameters">
 								<li>
-									<h4>T</h4>
-									<div class="tsd-comment tsd-typography">
-										<p>左值类型</p>
-									</div>
-								</li>
-								<li>
-									<h4>U</h4>
-									<div class="tsd-comment tsd-typography">
-										<p>右值类型</p>
-									</div>
+									<h4>T<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span></h4>
 								</li>
 							</ul>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>initStatus: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
+									<h5>fn: <span class="tsd-signature-type">T</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>初始值</p>
+										<p>回调函数</p>
 									</div>
 								</li>
 								<li>
-									<h5>reverseValue: <span class="tsd-signature-type">U</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = true</span></h5>
+									<h5>wait: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 1</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>切换值</p>
+										<p>延时时常(s)</p>
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="../interfaces/vx_hooks_usetoggle.usetoggleapi.html" class="tsd-signature-type" data-tsd-kind="Interface">UseToggleAPI</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">U</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/vx_hooks_usedebouncefn.usedebouncefnapi.html" class="tsd-signature-type" data-tsd-kind="Interface">useDebounceFnAPI</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -181,7 +172,7 @@
 					<li class=" tsd-kind-module">
 						<a href="vx_hooks_usedebounce.html">vx-<wbr>hooks/use<wbr>Debounce</a>
 					</li>
-					<li class=" tsd-kind-module">
+					<li class="current tsd-kind-module">
 						<a href="vx_hooks_usedebouncefn.html">vx-<wbr>hooks/use<wbr>Debounce<wbr>Fn</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -208,7 +199,7 @@
 					<li class=" tsd-kind-module">
 						<a href="vx_hooks_usetimeout.html">vx-<wbr>hooks/use<wbr>Timeout</a>
 					</li>
-					<li class="current tsd-kind-module">
+					<li class=" tsd-kind-module">
 						<a href="vx_hooks_usetoggle.html">vx-<wbr>hooks/use<wbr>Toggle</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -236,11 +227,11 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/vx_hooks_usetoggle.usetoggleapi.html" class="tsd-kind-icon">Use<wbr>ToggleAPI</a>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/vx_hooks_usedebouncefn.usedebouncefnapi.html" class="tsd-kind-icon">use<wbr>Debounce<wbr>FnAPI</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="vx_hooks_usetoggle.html#usetoggle" class="tsd-kind-icon">use<wbr>Toggle</a>
+						<a href="vx_hooks_usedebouncefn.html#usedebouncefn" class="tsd-kind-icon">use<wbr>Debounce<wbr>Fn</a>
 					</li>
 				</ul>
 			</nav>

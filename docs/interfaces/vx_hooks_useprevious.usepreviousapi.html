@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>UseToggleAPI | s-utils</title>
+	<title>UsePreviousAPI | s-utils</title>
 	<meta name="description" content="Documentation for s-utils">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -55,13 +55,13 @@
 					<a href="../modules.html">s-utils</a>
 				</li>
 				<li>
-					<a href="../modules/vx_hooks_usetoggle.html">vx-hooks/useToggle</a>
+					<a href="../modules/vx_hooks_useprevious.html">vx-hooks/usePrevious</a>
 				</li>
 				<li>
-					<a href="vx_hooks_usetoggle.usetoggleapi.html">UseToggleAPI</a>
+					<a href="vx_hooks_useprevious.usepreviousapi.html">UsePreviousAPI</a>
 				</li>
 			</ul>
-			<h1>Interface UseToggleAPI&lt;T, U&gt;</h1>
+			<h1>Interface UsePreviousAPI&lt;T&gt;</h1>
 		</div>
 	</div>
 </header>
@@ -71,8 +71,13 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>useToggle API</p>
+						<p>usePrevious API</p>
 					</div>
+					<dl class="tsd-comment-tags">
+						<dt>typepropm</dt>
+						<dd><p>T 值类型</p>
+						</dd>
+					</dl>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-type-parameters">
@@ -80,19 +85,6 @@
 				<ul class="tsd-type-parameters">
 					<li>
 						<h4>T</h4>
-						<div class="tsd-comment tsd-typography">
-							<div class="lead">
-								<p>左值类型</p>
-							</div>
-						</div>
-					</li>
-					<li>
-						<h4>U</h4>
-						<div class="tsd-comment tsd-typography">
-							<div class="lead">
-								<p>右值类型</p>
-							</div>
-						</div>
 					</li>
 				</ul>
 			</section>
@@ -100,7 +92,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">UseToggleAPI</span>
+						<span class="target">UsePreviousAPI</span>
 					</li>
 				</ul>
 			</section>
@@ -111,10 +103,8 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vx_hooks_usetoggle.usetoggleapi.html#setleft" class="tsd-kind-icon">set<wbr>Left</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vx_hooks_usetoggle.usetoggleapi.html#setright" class="tsd-kind-icon">set<wbr>Right</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vx_hooks_usetoggle.usetoggleapi.html#state" class="tsd-kind-icon">state</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vx_hooks_usetoggle.usetoggleapi.html#toggle" class="tsd-kind-icon">toggle</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vx_hooks_useprevious.usepreviousapi.html#curref" class="tsd-kind-icon">cur<wbr>Ref</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vx_hooks_useprevious.usepreviousapi.html#prevref" class="tsd-kind-icon">prev<wbr>Ref</a></li>
 							</ul>
 						</section>
 					</div>
@@ -123,114 +113,33 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="setleft" class="tsd-anchor"></a>
-					<h3>set<wbr>Left</h3>
-					<div class="tsd-signature tsd-kind-icon">set<wbr>Left<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
+					<a name="curref" class="tsd-anchor"></a>
+					<h3>cur<wbr>Ref</h3>
+					<div class="tsd-signature tsd-kind-icon">cur<wbr>Ref<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">WritableComputedRef</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/994c587/pkgs/vx-hooks/src/useToggle/index.ts#L22">vx-hooks/src/useToggle/index.ts:22</a></li>
+							<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/994c587/pkgs/vx-hooks/src/usePrevious/index.ts#L15">vx-hooks/src/usePrevious/index.ts:15</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>设置左值</p>
-						</div>
-					</div>
-					<div class="tsd-type-declaration">
-						<h4>Type declaration</h4>
-						<ul class="tsd-parameters">
-							<li class="tsd-parameter-signature">
-								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-interface">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-								</ul>
-								<ul class="tsd-descriptions">
-									<li class="tsd-description">
-										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="setright" class="tsd-anchor"></a>
-					<h3>set<wbr>Right</h3>
-					<div class="tsd-signature tsd-kind-icon">set<wbr>Right<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/994c587/pkgs/vx-hooks/src/useToggle/index.ts#L24">vx-hooks/src/useToggle/index.ts:24</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>设置右值</p>
-						</div>
-					</div>
-					<div class="tsd-type-declaration">
-						<h4>Type declaration</h4>
-						<ul class="tsd-parameters">
-							<li class="tsd-parameter-signature">
-								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-interface">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-								</ul>
-								<ul class="tsd-descriptions">
-									<li class="tsd-description">
-										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="state" class="tsd-anchor"></a>
-					<h3>state</h3>
-					<div class="tsd-signature tsd-kind-icon">state<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Ref</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">U</span><span class="tsd-signature-symbol">&gt;</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/994c587/pkgs/vx-hooks/src/useToggle/index.ts#L18">vx-hooks/src/useToggle/index.ts:18</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>当前状态值</p>
+							<p>当前值</p>
 						</div>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="toggle" class="tsd-anchor"></a>
-					<h3>toggle</h3>
-					<div class="tsd-signature tsd-kind-icon">toggle<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">U</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
+					<a name="prevref" class="tsd-anchor"></a>
+					<h3>prev<wbr>Ref</h3>
+					<div class="tsd-signature tsd-kind-icon">prev<wbr>Ref<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Ref</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/994c587/pkgs/vx-hooks/src/useToggle/index.ts#L20">vx-hooks/src/useToggle/index.ts:20</a></li>
+							<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/994c587/pkgs/vx-hooks/src/usePrevious/index.ts#L17">vx-hooks/src/usePrevious/index.ts:17</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>状态切换</p>
+							<p>缓存值, 初始时为 undefined</p>
 						</div>
-					</div>
-					<div class="tsd-type-declaration">
-						<h4>Type declaration</h4>
-						<ul class="tsd-parameters">
-							<li class="tsd-parameter-signature">
-								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-interface">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">U</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-								</ul>
-								<ul class="tsd-descriptions">
-									<li class="tsd-description">
-										<h4 class="tsd-parameters-title">Parameters</h4>
-										<ul class="tsd-parameters">
-											<li>
-												<h5><span class="tsd-flag ts-flagOptional">Optional</span> value: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">U</span></h5>
-											</li>
-										</ul>
-										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-									</li>
-								</ul>
-							</li>
-						</ul>
 					</div>
 				</section>
 			</section>
@@ -262,7 +171,7 @@
 					<li class=" tsd-kind-module">
 						<a href="../modules/vx_hooks_usemousewheel.html">vx-<wbr>hooks/use<wbr>Mousewheel</a>
 					</li>
-					<li class=" tsd-kind-module">
+					<li class="current tsd-kind-module">
 						<a href="../modules/vx_hooks_useprevious.html">vx-<wbr>hooks/use<wbr>Previous</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -280,7 +189,7 @@
 					<li class=" tsd-kind-module">
 						<a href="../modules/vx_hooks_usetimeout.html">vx-<wbr>hooks/use<wbr>Timeout</a>
 					</li>
-					<li class="current tsd-kind-module">
+					<li class=" tsd-kind-module">
 						<a href="../modules/vx_hooks_usetoggle.html">vx-<wbr>hooks/use<wbr>Toggle</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -311,26 +220,20 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="vx_hooks_usetoggle.usetoggleapi.html" class="tsd-kind-icon">Use<wbr>ToggleAPI</a>
+						<a href="vx_hooks_useprevious.usepreviousapi.html" class="tsd-kind-icon">Use<wbr>PreviousAPI</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="vx_hooks_usetoggle.usetoggleapi.html#setleft" class="tsd-kind-icon">set<wbr>Left</a>
+								<a href="vx_hooks_useprevious.usepreviousapi.html#curref" class="tsd-kind-icon">cur<wbr>Ref</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="vx_hooks_usetoggle.usetoggleapi.html#setright" class="tsd-kind-icon">set<wbr>Right</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="vx_hooks_usetoggle.usetoggleapi.html#state" class="tsd-kind-icon">state</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="vx_hooks_usetoggle.usetoggleapi.html#toggle" class="tsd-kind-icon">toggle</a>
+								<a href="vx_hooks_useprevious.usepreviousapi.html#prevref" class="tsd-kind-icon">prev<wbr>Ref</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../modules/vx_hooks_usetoggle.html#usetoggle" class="tsd-kind-icon">use<wbr>Toggle</a>
+						<a href="../modules/vx_hooks_useprevious.html#useprevious" class="tsd-kind-icon">use<wbr>Previous</a>
 					</li>
 				</ul>
 			</nav>

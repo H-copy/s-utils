@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>useTimeLoopAPI | s-utils</title>
+	<title>UseCounterAPI | s-utils</title>
 	<meta name="description" content="Documentation for s-utils">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -55,13 +55,13 @@
 					<a href="../modules.html">s-utils</a>
 				</li>
 				<li>
-					<a href="../modules/vx_hooks_usetimeout.html">vx-hooks/useTimeout</a>
+					<a href="../modules/vx_hooks_usecounter.html">vx-hooks/useCounter</a>
 				</li>
 				<li>
-					<a href="vx_hooks_usetimeout.usetimeloopapi.html">useTimeLoopAPI</a>
+					<a href="vx_hooks_usecounter.usecounterapi.html">UseCounterAPI</a>
 				</li>
 			</ul>
-			<h1>Interface useTimeLoopAPI</h1>
+			<h1>Interface UseCounterAPI</h1>
 		</div>
 	</div>
 </header>
@@ -71,7 +71,7 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>useTimeLoop API</p>
+						<p>useCounter API</p>
 					</div>
 				</div>
 			</section>
@@ -79,7 +79,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">useTimeLoopAPI</span>
+						<span class="target">UseCounterAPI</span>
 					</li>
 				</ul>
 			</section>
@@ -90,10 +90,11 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vx_hooks_usetimeout.usetimeloopapi.html#isrun" class="tsd-kind-icon">is<wbr>Run</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vx_hooks_usetimeout.usetimeloopapi.html#run" class="tsd-kind-icon">run</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vx_hooks_usetimeout.usetimeloopapi.html#setcallback" class="tsd-kind-icon">set<wbr>Callback</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vx_hooks_usetimeout.usetimeloopapi.html#stop" class="tsd-kind-icon">stop</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vx_hooks_usecounter.usecounterapi.html#current" class="tsd-kind-icon">current</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vx_hooks_usecounter.usecounterapi.html#dec" class="tsd-kind-icon">dec</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vx_hooks_usecounter.usecounterapi.html#inc" class="tsd-kind-icon">inc</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vx_hooks_usecounter.usecounterapi.html#reset" class="tsd-kind-icon">reset</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vx_hooks_usecounter.usecounterapi.html#set" class="tsd-kind-icon">set</a></li>
 							</ul>
 						</section>
 					</div>
@@ -102,50 +103,45 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="isrun" class="tsd-anchor"></a>
-					<h3>is<wbr>Run</h3>
-					<div class="tsd-signature tsd-kind-icon">is<wbr>Run<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Ref</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="current" class="tsd-anchor"></a>
+					<h3>current</h3>
+					<div class="tsd-signature tsd-kind-icon">current<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Ref</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/994c587/pkgs/vx-hooks/src/useTimeout/index.ts#L22">vx-hooks/src/useTimeout/index.ts:22</a></li>
+							<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/994c587/pkgs/vx-hooks/src/useCounter/index.ts#L22">vx-hooks/src/useCounter/index.ts:22</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>是否运行中</p>
+							<p>当前值</p>
 						</div>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="run" class="tsd-anchor"></a>
-					<h3>run</h3>
-					<div class="tsd-signature tsd-kind-icon">run<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
+					<a name="dec" class="tsd-anchor"></a>
+					<h3>dec</h3>
+					<div class="tsd-signature tsd-kind-icon">dec<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>delta<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/994c587/pkgs/vx-hooks/src/useTimeout/index.ts#L18">vx-hooks/src/useTimeout/index.ts:18</a></li>
+							<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/994c587/pkgs/vx-hooks/src/useCounter/index.ts#L25">vx-hooks/src/useCounter/index.ts:25</a></li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>开启定时器</p>
-						</div>
-					</div>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
 						<ul class="tsd-parameters">
 							<li class="tsd-parameter-signature">
 								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-interface">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>delta<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 								</ul>
 								<ul class="tsd-descriptions">
 									<li class="tsd-description">
 										<h4 class="tsd-parameters-title">Parameters</h4>
 										<ul class="tsd-parameters">
 											<li>
-												<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
+												<h5><span class="tsd-flag ts-flagOptional">Optional</span> delta: <span class="tsd-signature-type">number</span></h5>
 											</li>
 										</ul>
-										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
 									</li>
 								</ul>
 							</li>
@@ -153,35 +149,30 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="setcallback" class="tsd-anchor"></a>
-					<h3>set<wbr>Callback</h3>
-					<div class="tsd-signature tsd-kind-icon">set<wbr>Callback<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>callback<span class="tsd-signature-symbol">: </span><a href="../modules/vx_hooks_usetimeout.html#fn" class="tsd-signature-type" data-tsd-kind="Type alias">Fn</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="../modules/vx_hooks_usetimeout.html#fn" class="tsd-signature-type" data-tsd-kind="Type alias">Fn</a></div>
+					<a name="inc" class="tsd-anchor"></a>
+					<h3>inc</h3>
+					<div class="tsd-signature tsd-kind-icon">inc<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>delta<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/994c587/pkgs/vx-hooks/src/useTimeout/index.ts#L24">vx-hooks/src/useTimeout/index.ts:24</a></li>
+							<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/994c587/pkgs/vx-hooks/src/useCounter/index.ts#L24">vx-hooks/src/useCounter/index.ts:24</a></li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>修改执行回调</p>
-						</div>
-					</div>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
 						<ul class="tsd-parameters">
 							<li class="tsd-parameter-signature">
 								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-interface">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>callback<span class="tsd-signature-symbol">: </span><a href="../modules/vx_hooks_usetimeout.html#fn" class="tsd-signature-type" data-tsd-kind="Type alias">Fn</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../modules/vx_hooks_usetimeout.html#fn" class="tsd-signature-type" data-tsd-kind="Type alias">Fn</a></li>
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>delta<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 								</ul>
 								<ul class="tsd-descriptions">
 									<li class="tsd-description">
 										<h4 class="tsd-parameters-title">Parameters</h4>
 										<ul class="tsd-parameters">
 											<li>
-												<h5>callback: <a href="../modules/vx_hooks_usetimeout.html#fn" class="tsd-signature-type" data-tsd-kind="Type alias">Fn</a></h5>
+												<h5><span class="tsd-flag ts-flagOptional">Optional</span> delta: <span class="tsd-signature-type">number</span></h5>
 											</li>
 										</ul>
-										<h4 class="tsd-returns-title">Returns <a href="../modules/vx_hooks_usetimeout.html#fn" class="tsd-signature-type" data-tsd-kind="Type alias">Fn</a></h4>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
 									</li>
 								</ul>
 							</li>
@@ -189,29 +180,55 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="stop" class="tsd-anchor"></a>
-					<h3>stop</h3>
-					<div class="tsd-signature tsd-kind-icon">stop<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
+					<a name="reset" class="tsd-anchor"></a>
+					<h3>reset</h3>
+					<div class="tsd-signature tsd-kind-icon">reset<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/994c587/pkgs/vx-hooks/src/useTimeout/index.ts#L20">vx-hooks/src/useTimeout/index.ts:20</a></li>
+							<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/994c587/pkgs/vx-hooks/src/useCounter/index.ts#L26">vx-hooks/src/useCounter/index.ts:26</a></li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>终止定时器</p>
-						</div>
-					</div>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
 						<ul class="tsd-parameters">
 							<li class="tsd-parameter-signature">
 								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-interface">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 								</ul>
 								<ul class="tsd-descriptions">
 									<li class="tsd-description">
-										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="set" class="tsd-anchor"></a>
+					<h3>set</h3>
+					<div class="tsd-signature tsd-kind-icon">set<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/994c587/pkgs/vx-hooks/src/useCounter/index.ts#L23">vx-hooks/src/useCounter/index.ts:23</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-interface">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>value: <span class="tsd-signature-type">number</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
 									</li>
 								</ul>
 							</li>
@@ -232,7 +249,7 @@
 					<li class=" tsd-kind-module">
 						<a href="../modules/vx_hooks_usebool.html">vx-<wbr>hooks/use<wbr>Bool</a>
 					</li>
-					<li class=" tsd-kind-module">
+					<li class="current tsd-kind-module">
 						<a href="../modules/vx_hooks_usecounter.html">vx-<wbr>hooks/use<wbr>Counter</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -262,7 +279,7 @@
 					<li class=" tsd-kind-module">
 						<a href="../modules/vx_hooks_usethrottlefn.html">vx-<wbr>hooks/use<wbr>Throttle<wbr>Fn</a>
 					</li>
-					<li class="current tsd-kind-module">
+					<li class=" tsd-kind-module">
 						<a href="../modules/vx_hooks_usetimeout.html">vx-<wbr>hooks/use<wbr>Timeout</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -293,38 +310,35 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="vx_hooks_usetimeout.usetimeoutapi.html" class="tsd-kind-icon">Use<wbr>TimeoutAPI</a>
-					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-module">
-						<a href="vx_hooks_usetimeout.usetimeloopapi.html" class="tsd-kind-icon">use<wbr>Time<wbr>LoopAPI</a>
+						<a href="vx_hooks_usecounter.usecounterapi.html" class="tsd-kind-icon">Use<wbr>CounterAPI</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="vx_hooks_usetimeout.usetimeloopapi.html#isrun" class="tsd-kind-icon">is<wbr>Run</a>
+								<a href="vx_hooks_usecounter.usecounterapi.html#current" class="tsd-kind-icon">current</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="vx_hooks_usetimeout.usetimeloopapi.html#run" class="tsd-kind-icon">run</a>
+								<a href="vx_hooks_usecounter.usecounterapi.html#dec" class="tsd-kind-icon">dec</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="vx_hooks_usetimeout.usetimeloopapi.html#setcallback" class="tsd-kind-icon">set<wbr>Callback</a>
+								<a href="vx_hooks_usecounter.usecounterapi.html#inc" class="tsd-kind-icon">inc</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="vx_hooks_usetimeout.usetimeloopapi.html#stop" class="tsd-kind-icon">stop</a>
+								<a href="vx_hooks_usecounter.usecounterapi.html#reset" class="tsd-kind-icon">reset</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="vx_hooks_usecounter.usecounterapi.html#set" class="tsd-kind-icon">set</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
-						<a href="../modules/vx_hooks_usetimeout.html#fn" class="tsd-kind-icon">Fn</a>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="vx_hooks_usecounter.usecounteroptions.html" class="tsd-kind-icon">Use<wbr>Counter<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
-						<a href="../modules/vx_hooks_usetimeout.html#usetimeloop" class="tsd-kind-icon">use<wbr>Time<wbr>Loop</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-module">
-						<a href="../modules/vx_hooks_usetimeout.html#usetimeout" class="tsd-kind-icon">use<wbr>Timeout</a>
+						<a href="../modules/vx_hooks_usecounter.html#usecounter" class="tsd-kind-icon">use<wbr>Counter</a>
 					</li>
 				</ul>
 			</nav>
