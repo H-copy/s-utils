@@ -14,6 +14,7 @@
  * - useThrottleFn
  * - useSetRef
  * - usePrevious
+ * - useCounter
  * @packageDocumentation
  * @module vx-hooks
  */
@@ -29,3 +30,4 @@ export * from './useThrottle'
 export * from './useThrottleFn'
 export * from './useSetRef'
 export * from './usePrevious'
+export * from './useCounter'
