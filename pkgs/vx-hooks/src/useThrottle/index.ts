@@ -23,9 +23,27 @@ export interface useThrottleAPI<T>{
 
 /**
  * 节流值
+ * @summary
+ * 使用节流函数更新对应响应值, 时间间隔将小于配置时间  时间间隔 => 等待时间 - 0.01s
  * @param watchFn 监听对象
  * @param wait { 1 } 延时时常(s)
  * @typeParam T 监听值类型
+ * @example
+ * ```ts
+ * 
+ * const watchVal = ref(0)
+ * const { state } = useThrottle(watchVal, 2)
+ * 
+ * watchval.value = 1
+ * // dely 1
+ * watchval.value = 2
+ * watchval.value = 3
+ * watchval.value = 4
+ * // dely 1
+ * console.log(state.value)
+ * => 1
+ * 
+ * ```
  */
 export function useThrottle<T>(watchFn: (() => T)| Ref<T> | ComputedRef<T>, wait = 1): useThrottleAPI<T> {
 
