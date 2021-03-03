@@ -173,7 +173,7 @@ export function useMousewheel(): UseMousewheelAPI {
     deltaX: 0,
     deltaZ: 0,
     deltaMode: 0
-  } as WheelEvent)
+  }) as Ref<WheelEvent>
 
   const wheelType = computed(() => mouseWheelTypeMap(wheelEvent.value.deltaMode))
   const directionY = computed(() => buildCheck<MouseWheelDirectionY>('up', 'down', 'unchange')(wheelEvent.value.deltaY))
