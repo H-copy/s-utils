@@ -24,10 +24,13 @@
     "url": "https://github.com/H-copy/s-utils/tree/main/pkgs/vx-hooks"
   },
   "keywords": [
-    "micro",
     "hooks",
+    "hook",
     "vue3.0",
-    "typescript"
+    "vue",
+    "ts",
+    "typescript",
+    "vx-hooks"
   ],
   "files": [
     "lib",
