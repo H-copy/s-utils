@@ -29,6 +29,7 @@
  * 
  * ### Dom
  * - useMousewheel
+ * - useClickAway
  * 
  * @packageDocumentation
  * @module vx-hooks
@@ -49,3 +50,4 @@ export * from './useCounter'
 export * from './useStrongeState'
 export * from './useLocalStorageState'
 export * from './useSessionStorageState'
+export * from './useClickAway'
