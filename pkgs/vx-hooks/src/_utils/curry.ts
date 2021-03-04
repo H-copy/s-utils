@@ -15,7 +15,7 @@ import { pipe } from './pipe'
  * addOne(11) ==> 12
  * 
  */
-export const curry = <T extends Function>(fn: T, preArgs = [] as any[]) => (...args: any) => {
+export const curry = <T extends (...args:any) => any>(fn: T, preArgs = [] as any[]) => (...args: any) => {
   return pipe(
     () => [[...preArgs, ...args], fn], // 初始调用时, preArgs 设置默认值，保证数组的正常结构
     ([data, fn]: any[]) => data.length === fn.length ? fn(...data) : curry(fn, data)

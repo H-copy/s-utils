@@ -13,4 +13,4 @@
  *  => step 1
  *  => step 2
 */
-export const pipe = (...fns: Function[]) => (arg?: any) => fns.reduce((acc, fn) => fn(acc), arg)
+export const pipe = (...fns: ((...args:any[]) => any)[]) => (arg?: any) => fns.reduce((acc, fn) => fn(acc), arg)

@@ -1,4 +1,3 @@
-/** @internal */
 
 import { isRef,  Ref } from 'vue'
 
@@ -8,8 +7,7 @@ export type BaseTarget<T = HTMLElement> =
   | null
   | Ref<T>
 
-type TargetElement = HTMLElement | Element | Document | Window;
-
+export type TargetElement = HTMLElement | Element | Document | Window;
 
 export function getTargetElement(target: BaseTarget<TargetElement>, defaultElement?: TargetElement): TargetElement | undefined | null
 {
