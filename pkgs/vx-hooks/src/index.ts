@@ -32,6 +32,8 @@
  * - useClickAway
  * - useDrop
  * - useHover
+ * - useMouse
+ * - useSize
  * 
  * @packageDocumentation
  * @module vx-hooks
@@ -55,5 +57,7 @@ export * from './useMousewheel'
 export * from './useClickAway'
 export * from './useDrop'
 export * from './useHover'
+export * from './useMouse'
+export * from './useSize'
 
 export * from './_utils'

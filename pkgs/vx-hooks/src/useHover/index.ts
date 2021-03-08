@@ -1,3 +1,9 @@
+/**
+ * 鼠标悬停
+ * @packageDocumentation
+ * @module vx-hooks/useHover
+ */
+
 import {
   ref,
   watch,

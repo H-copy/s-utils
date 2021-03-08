@@ -67,6 +67,7 @@
   },
   "dependencies": {
     "dts-gen": "^0.6.0",
-    "global": "^4.4.0"
+    "global": "^4.4.0",
+    "resize-observer-polyfill": "^1.5.1"
   }
 }
