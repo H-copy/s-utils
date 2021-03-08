@@ -11,7 +11,7 @@ export interface UseSizeAPI {
   /** 中断响应 */
   watchStop: WatchStopHandle;
   /** 绑定对象 */
-  element: Ref<HTMLElement>;
+  element: Ref<HTMLElement | undefined>;
   /** 尺寸值 */
   state: Ref<{
     width: number;
@@ -42,7 +42,7 @@ export function useSize(target?: Ref<HTMLElement | undefined>): UseSizeAPI {
     height: 0
   })
 
-  const updateState = (width: number = 0, height: number = 0) => {
+  const updateState = (width = 0, height = 0) => {
     state.value = {
       width,
       height
