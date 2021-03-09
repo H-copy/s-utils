@@ -1,17 +1,5 @@
 import { useStorageState } from '../index'
 
-// sessionStore mock
-let __sessionStore:{[s:string]: string} = {}
-let __sessionKeys = new Set<string>() 
-global.sessionStorage = {
-  getItem: (key:string) => __sessionStore[key],
-  setItem: (key: string, val: string) => { __sessionStore[key] = val; __sessionKeys.add(key) },
-  clear: () => { __sessionStore = {}; __sessionKeys = new Set<string>() },
-  removeItem: (key: string) => { delete __sessionStore[key]; __sessionKeys.delete(key) },
-  key: (index: number):string => [...__sessionKeys][index],
-  length: 0,
-}
-
 const valKey = 'DATA'
 
 beforeEach(() => {
@@ -25,7 +13,6 @@ describe('useStorageState', () => {
       10,
       'string',
       null,
-      undefined,
       {id: 1},
       [1, 2, 3]
     ]
@@ -56,7 +43,7 @@ describe('useStorageState', () => {
     expect(sessionStorage.getItem(valKey)).toEqual(JSON.stringify(initVal2))
 
     update()
-    expect(sessionStorage.getItem(valKey)).toBeUndefined()
+    expect(sessionStorage.getItem(valKey)).toBeNull()
   })
   
 })

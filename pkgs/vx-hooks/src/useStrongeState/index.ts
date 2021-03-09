@@ -7,7 +7,7 @@
 import { ref, Ref } from 'vue'
 
 
-function getStorageValue<T>(storage: Storage, key: string, defaultValue?: T | (() => T)):(T | undefined) {
+function getStorageValue<T>(storage: Storage, key: string, defaultValue?: T | (() => T)):(T | undefined | null) {
   const raw = storage.getItem(key)
 
   if (raw) {
@@ -26,7 +26,7 @@ function getStorageValue<T>(storage: Storage, key: string, defaultValue?: T | ((
  */
 export interface UseStorageStateAPI<T>{
   /** 缓存值 */
-  state: Ref<T | undefined>;
+  state: Ref<T | undefined | null>;
   /** 更新函数 */
   update: (value?: T) => void;
 }
@@ -51,9 +51,9 @@ export interface UseStorageStateAPI<T>{
  * ``` 
  */
 export function useStorageState<T>(storage: Storage, key: string, defaultValue?: T | (() => T)) {
-  const state = ref(getStorageValue(storage, key, defaultValue)) as Ref<T | undefined>
+  const state = ref(getStorageValue(storage, key, defaultValue)) as Ref<T | undefined | null>
 
-  function update(value?: T) {
+  function update(value?: T | null) {
     if (typeof value === 'undefined') {
       storage.removeItem(key)
       state.value = undefined

@@ -1,6 +1,6 @@
 {
   "name": "vx-hooks",
-  "version": "2.3.0",
+  "version": "2.7.0",
   "description": "vue 3.0 hook tool",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
@@ -14,7 +14,7 @@
     "dev": "gulp --color --gulpfile ./scripts/dev.js",
     "build": "gulp -cwd ./ --color --gulpfile ./scripts/build.js",
     "concat:types": "api-extractor run",
-    "test": "jest --coverage",
+    "test": "jest --coverage --env=jsdom",
     "doc:build": "typedoc --options ./typedoc.config.json",
     "doc:watch": "typedoc --watch --options ./typedoc.config.json",
     "doc": "http-server ./docs -o -p 7000"
@@ -24,10 +24,13 @@
     "url": "https://github.com/H-copy/s-utils/tree/main/pkgs/vx-hooks"
   },
   "keywords": [
-    "micro",
     "hooks",
+    "hook",
     "vue3.0",
-    "typescript"
+    "vue",
+    "ts",
+    "typescript",
+    "vx-hooks"
   ],
   "files": [
     "lib",
@@ -38,6 +41,7 @@
     "@types/jest": "^26.0.20",
     "@typescript-eslint/eslint-plugin": "^4.6.1",
     "@typescript-eslint/parser": "^4.4.1",
+    "@vue/test-utils": "^2.0.0-rc.3",
     "gulp": "^4.0.2",
     "gulp-clean": "^0.4.0",
     "gulp-concat": "^2.6.1",
@@ -63,6 +67,7 @@
   },
   "dependencies": {
     "dts-gen": "^0.6.0",
-    "global": "^4.4.0"
+    "global": "^4.4.0",
+    "resize-observer-polyfill": "^1.5.1"
   }
 }
