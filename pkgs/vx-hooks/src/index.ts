@@ -34,6 +34,7 @@
  * - useHover
  * - useMouse
  * - useSize
+ * - useMutationObserver
  * 
  * @packageDocumentation
  * @module vx-hooks
@@ -59,5 +60,6 @@ export * from './useDrop'
 export * from './useHover'
 export * from './useMouse'
 export * from './useSize'
+export * from './useMutationObserver'
 
 export * from './_utils'
