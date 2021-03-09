@@ -119,6 +119,7 @@
 						<li>useHover</li>
 						<li>useMouse</li>
 						<li>useSize</li>
+						<li>useMutationObserver</li>
 					</ul>
 				</div>
 			</section>
@@ -156,6 +157,8 @@
 								<li class="tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter"><a href="../interfaces/vx_hooks.usetoggleapi.html" class="tsd-kind-icon">Use<wbr>ToggleAPI</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter"><a href="../interfaces/vx_hooks.usedebounceapi.html" class="tsd-kind-icon">use<wbr>DebounceAPI</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/vx_hooks.usedebouncefnapi.html" class="tsd-kind-icon">use<wbr>Debounce<wbr>FnAPI</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/vx_hooks.usemutationobserverapi.html" class="tsd-kind-icon">use<wbr>Mutation<wbr>ObserverAPI</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/vx_hooks.usemutationobserveroptions.html" class="tsd-kind-icon">use<wbr>Mutation<wbr>Observer<wbr>Options</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/vx_hooks.usetimeloopapi.html" class="tsd-kind-icon">use<wbr>Time<wbr>LoopAPI</a></li>
 							</ul>
 						</section>
@@ -169,6 +172,12 @@
 								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="vx_hooks.html#mousewheeldirectionz" class="tsd-kind-icon">Mouse<wbr>Wheel<wbr>DirectionZ</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="vx_hooks.html#mousewheeltype" class="tsd-kind-icon">Mouse<wbr>Wheel<wbr>Type</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="vx_hooks.html#targetelement" class="tsd-kind-icon">Target<wbr>Element</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Variables</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="vx_hooks.html#defaultmutationobserverinit" class="tsd-kind-icon">default<wbr>Mutation<wbr>Observer<wbr>Init</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -192,6 +201,7 @@
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter"><a href="vx_hooks.html#usemap" class="tsd-kind-icon">use<wbr>Map</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="vx_hooks.html#usemouse" class="tsd-kind-icon">use<wbr>Mouse</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="vx_hooks.html#usemousewheel" class="tsd-kind-icon">use<wbr>Mousewheel</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="vx_hooks.html#usemutationobserver" class="tsd-kind-icon">use<wbr>Mutation<wbr>Observer</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter"><a href="vx_hooks.html#useprevious" class="tsd-kind-icon">use<wbr>Previous</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter"><a href="vx_hooks.html#usesessionstoragestate" class="tsd-kind-icon">use<wbr>Session<wbr>Storage<wbr>State</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter"><a href="vx_hooks.html#useset" class="tsd-kind-icon">use<wbr>Set</a></li>
@@ -216,7 +226,7 @@
 					<div class="tsd-signature tsd-kind-icon">Base<wbr>Target&lt;T&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Ref</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/47dfbf0/pkgs/vx-hooks/src/_utils/dom.ts#L4">vx-hooks/src/_utils/dom.ts:4</a></li>
+							<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/fa44797/pkgs/vx-hooks/src/_utils/dom.ts#L4">vx-hooks/src/_utils/dom.ts:4</a></li>
 						</ul>
 					</aside>
 					<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -232,7 +242,7 @@
 					<div class="tsd-signature tsd-kind-icon">Fn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/47dfbf0/pkgs/vx-hooks/src/useTimeout/index.ts#L10">vx-hooks/src/useTimeout/index.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/fa44797/pkgs/vx-hooks/src/useTimeout/index.ts#L10">vx-hooks/src/useTimeout/index.ts:10</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -263,7 +273,7 @@
 					<div class="tsd-signature tsd-kind-icon">Mouse<wbr>Wheel<wbr>DirectionX<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;left&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;right&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;unchange&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/47dfbf0/pkgs/vx-hooks/src/useMousewheel/index.ts#L19">vx-hooks/src/useMousewheel/index.ts:19</a></li>
+							<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/fa44797/pkgs/vx-hooks/src/useMousewheel/index.ts#L19">vx-hooks/src/useMousewheel/index.ts:19</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -278,7 +288,7 @@
 					<div class="tsd-signature tsd-kind-icon">Mouse<wbr>Wheel<wbr>DirectionY<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;up&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;down&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;unchange&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/47dfbf0/pkgs/vx-hooks/src/useMousewheel/index.ts#L17">vx-hooks/src/useMousewheel/index.ts:17</a></li>
+							<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/fa44797/pkgs/vx-hooks/src/useMousewheel/index.ts#L17">vx-hooks/src/useMousewheel/index.ts:17</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -293,7 +303,7 @@
 					<div class="tsd-signature tsd-kind-icon">Mouse<wbr>Wheel<wbr>DirectionZ<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;out&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;in&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;unchange&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/47dfbf0/pkgs/vx-hooks/src/useMousewheel/index.ts#L21">vx-hooks/src/useMousewheel/index.ts:21</a></li>
+							<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/fa44797/pkgs/vx-hooks/src/useMousewheel/index.ts#L21">vx-hooks/src/useMousewheel/index.ts:21</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -308,7 +318,7 @@
 					<div class="tsd-signature tsd-kind-icon">Mouse<wbr>Wheel<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;px&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;line&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;page&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;undefined&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/47dfbf0/pkgs/vx-hooks/src/useMousewheel/index.ts#L23">vx-hooks/src/useMousewheel/index.ts:23</a></li>
+							<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/fa44797/pkgs/vx-hooks/src/useMousewheel/index.ts#L23">vx-hooks/src/useMousewheel/index.ts:23</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -323,9 +333,35 @@
 					<div class="tsd-signature tsd-kind-icon">Target<wbr>Element<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">HTMLElement</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Element</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Document</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Window</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/47dfbf0/pkgs/vx-hooks/src/_utils/dom.ts#L10">vx-hooks/src/_utils/dom.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/fa44797/pkgs/vx-hooks/src/_utils/dom.ts#L10">vx-hooks/src/_utils/dom.ts:10</a></li>
 						</ul>
 					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Variables</h2>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="defaultmutationobserverinit" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> default<wbr>Mutation<wbr>Observer<wbr>Init</h3>
+					<div class="tsd-signature tsd-kind-icon">default<wbr>Mutation<wbr>Observer<wbr>Init<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>attributes<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> = ...</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/fa44797/pkgs/vx-hooks/src/useMutationObserver/index.ts#L29">vx-hooks/src/useMutationObserver/index.ts:29</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>useMutationObserver 默认属性配置</p>
+						</div>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5>attributes<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></h5>
+							</li>
+						</ul>
+					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
@@ -340,7 +376,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/47dfbf0/pkgs/vx-hooks/src/_utils/curry.ts#L18">vx-hooks/src/_utils/curry.ts:18</a></li>
+									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/fa44797/pkgs/vx-hooks/src/_utils/curry.ts#L18">vx-hooks/src/_utils/curry.ts:18</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -415,7 +451,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/47dfbf0/pkgs/vx-hooks/src/_utils/dely.ts#L2">vx-hooks/src/_utils/dely.ts:2</a></li>
+									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/fa44797/pkgs/vx-hooks/src/_utils/dely.ts#L2">vx-hooks/src/_utils/dely.ts:2</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -438,7 +474,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/47dfbf0/pkgs/vx-hooks/src/useDrop/index.ts#L18">vx-hooks/src/useDrop/index.ts:18</a></li>
+									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/fa44797/pkgs/vx-hooks/src/useDrop/index.ts#L18">vx-hooks/src/useDrop/index.ts:18</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -455,7 +491,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/47dfbf0/pkgs/vx-hooks/src/_utils/dom.ts#L12">vx-hooks/src/_utils/dom.ts:12</a></li>
+									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/fa44797/pkgs/vx-hooks/src/_utils/dom.ts#L12">vx-hooks/src/_utils/dom.ts:12</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -481,7 +517,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/47dfbf0/pkgs/vx-hooks/src/useMousewheel/index.ts#L31">vx-hooks/src/useMousewheel/index.ts:31</a></li>
+									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/fa44797/pkgs/vx-hooks/src/useMousewheel/index.ts#L31">vx-hooks/src/useMousewheel/index.ts:31</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -513,7 +549,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/47dfbf0/pkgs/vx-hooks/src/_utils/pipe.ts#L16">vx-hooks/src/_utils/pipe.ts:16</a></li>
+									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/fa44797/pkgs/vx-hooks/src/_utils/pipe.ts#L16">vx-hooks/src/_utils/pipe.ts:16</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -576,7 +612,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/47dfbf0/pkgs/vx-hooks/src/useBool/index.ts#L53">vx-hooks/src/useBool/index.ts:53</a></li>
+									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/fa44797/pkgs/vx-hooks/src/useBool/index.ts#L53">vx-hooks/src/useBool/index.ts:53</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -627,7 +663,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/47dfbf0/pkgs/vx-hooks/src/useClickAway/index.ts#L70">vx-hooks/src/useClickAway/index.ts:70</a></li>
+									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/fa44797/pkgs/vx-hooks/src/useClickAway/index.ts#L70">vx-hooks/src/useClickAway/index.ts:70</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -725,7 +761,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/47dfbf0/pkgs/vx-hooks/src/useCounter/index.ts#L59">vx-hooks/src/useCounter/index.ts:59</a></li>
+									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/fa44797/pkgs/vx-hooks/src/useCounter/index.ts#L59">vx-hooks/src/useCounter/index.ts:59</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -871,7 +907,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/47dfbf0/pkgs/vx-hooks/src/useDebounce/index.ts#L71">vx-hooks/src/useDebounce/index.ts:71</a></li>
+									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/fa44797/pkgs/vx-hooks/src/useDebounce/index.ts#L71">vx-hooks/src/useDebounce/index.ts:71</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -962,7 +998,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/47dfbf0/pkgs/vx-hooks/src/useDebounceFn/index.ts#L39">vx-hooks/src/useDebounceFn/index.ts:39</a></li>
+									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/fa44797/pkgs/vx-hooks/src/useDebounceFn/index.ts#L39">vx-hooks/src/useDebounceFn/index.ts:39</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1021,7 +1057,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/47dfbf0/pkgs/vx-hooks/src/useDrop/index.ts#L40">vx-hooks/src/useDrop/index.ts:40</a></li>
+									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/fa44797/pkgs/vx-hooks/src/useDrop/index.ts#L40">vx-hooks/src/useDrop/index.ts:40</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1063,7 +1099,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/47dfbf0/pkgs/vx-hooks/src/useDrop/index.ts#L119">vx-hooks/src/useDrop/index.ts:119</a></li>
+									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/fa44797/pkgs/vx-hooks/src/useDrop/index.ts#L119">vx-hooks/src/useDrop/index.ts:119</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1124,7 +1160,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/47dfbf0/pkgs/vx-hooks/src/useHover/index.ts#L81">vx-hooks/src/useHover/index.ts:81</a></li>
+									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/fa44797/pkgs/vx-hooks/src/useHover/index.ts#L81">vx-hooks/src/useHover/index.ts:81</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1193,7 +1229,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/47dfbf0/pkgs/vx-hooks/src/useLocalStorageState/index.ts#L16">vx-hooks/src/useLocalStorageState/index.ts:16</a></li>
+									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/fa44797/pkgs/vx-hooks/src/useLocalStorageState/index.ts#L16">vx-hooks/src/useLocalStorageState/index.ts:16</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1242,7 +1278,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/47dfbf0/pkgs/vx-hooks/src/useMap/index.ts#L75">vx-hooks/src/useMap/index.ts:75</a></li>
+									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/fa44797/pkgs/vx-hooks/src/useMap/index.ts#L75">vx-hooks/src/useMap/index.ts:75</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1330,7 +1366,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/47dfbf0/pkgs/vx-hooks/src/useMouse/index.ts#L49">vx-hooks/src/useMouse/index.ts:49</a></li>
+									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/fa44797/pkgs/vx-hooks/src/useMouse/index.ts#L49">vx-hooks/src/useMouse/index.ts:49</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1407,7 +1443,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/47dfbf0/pkgs/vx-hooks/src/useMousewheel/index.ts#L170">vx-hooks/src/useMousewheel/index.ts:170</a></li>
+									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/fa44797/pkgs/vx-hooks/src/useMousewheel/index.ts#L170">vx-hooks/src/useMousewheel/index.ts:170</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1463,6 +1499,70 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="usemutationobserver" class="tsd-anchor"></a>
+					<h3>use<wbr>Mutation<wbr>Observer</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">use<wbr>Mutation<wbr>Observer<span class="tsd-signature-symbol">(</span>conf<span class="tsd-signature-symbol">: </span><a href="../interfaces/vx_hooks_usemutationobserver.usemutationobserveroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">useMutationObserverOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/vx_hooks_usemutationobserver.usemutationobserverapi.html" class="tsd-signature-type" data-tsd-kind="Interface">useMutationObserverAPI</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/fa44797/pkgs/vx-hooks/src/useMutationObserver/index.ts#L68">vx-hooks/src/useMutationObserver/index.ts:68</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>响应元素属性变化</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript"><span style="color: #000000">{</span>
+<span style="color: #000000">  template : </span><span style="color: #A31515">`</span>
+<span style="color: #A31515">     &lt;div id=&#039;box&#039; :style=&#039;style&#039; ref=&#039;element&#039; @click=&#039;change&#039;&gt;</span>
+<span style="color: #A31515">     &lt;/div&gt;</span>
+<span style="color: #A31515">   `</span><span style="color: #000000">,</span>
+<span style="color: #000000">   props: [</span><span style="color: #A31515">&#039;handler&#039;</span><span style="color: #000000">],</span>
+<span style="color: #000000">   </span><span style="color: #795E26">setup</span><span style="color: #000000">(</span><span style="color: #001080">props</span><span style="color: #000000">: </span><span style="color: #001080">any</span><span style="color: #000000">){</span>
+<span style="color: #000000">     </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">style</span><span style="color: #000000"> = </span><span style="color: #795E26">ref</span><span style="color: #000000">({</span>
+<span style="color: #000000">       </span><span style="color: #001080">width:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;100px&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">       </span><span style="color: #001080">height:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;100px&#039;</span>
+<span style="color: #000000">     })</span>
+
+<span style="color: #000000">     </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #795E26">change</span><span style="color: #000000"> = () </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000">{</span>
+<span style="color: #000000">       </span><span style="color: #001080">style</span><span style="color: #000000">.</span><span style="color: #001080">value</span><span style="color: #000000"> = {</span>
+<span style="color: #000000">         </span><span style="color: #001080">width:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;200px&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">         </span><span style="color: #001080">height:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;200px&#039;</span>
+<span style="color: #000000">       }</span>
+<span style="color: #000000">     }</span>
+
+<span style="color: #000000">     </span><span style="color: #0000FF">const</span><span style="color: #000000"> { </span><span style="color: #0070C1">element</span><span style="color: #000000"> } = </span><span style="color: #795E26">useMutationObserver</span><span style="color: #000000">({</span>
+<span style="color: #000000">       </span><span style="color: #001080">handler:</span><span style="color: #000000"> </span><span style="color: #001080">props</span><span style="color: #000000">.</span><span style="color: #001080">handler</span>
+<span style="color: #000000">     })</span>
+
+<span style="color: #000000">     </span><span style="color: #AF00DB">return</span><span style="color: #000000">{</span>
+<span style="color: #000000">       </span><span style="color: #001080">style</span><span style="color: #000000">,</span>
+<span style="color: #000000">       </span><span style="color: #001080">change</span><span style="color: #000000">,</span>
+<span style="color: #000000">       </span><span style="color: #001080">element</span><span style="color: #000000">, </span>
+<span style="color: #000000">     }</span>
+<span style="color: #000000">   }</span>
+<span style="color: #000000">}</span>
+
+</code></pre>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>conf: <a href="../interfaces/vx_hooks_usemutationobserver.usemutationobserveroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">useMutationObserverOptions</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/vx_hooks_usemutationobserver.usemutationobserverapi.html" class="tsd-signature-type" data-tsd-kind="Interface">useMutationObserverAPI</a></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
 					<a name="useprevious" class="tsd-anchor"></a>
 					<h3>use<wbr>Previous</h3>
@@ -1473,7 +1573,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/47dfbf0/pkgs/vx-hooks/src/usePrevious/index.ts#L51">vx-hooks/src/usePrevious/index.ts:51</a></li>
+									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/fa44797/pkgs/vx-hooks/src/usePrevious/index.ts#L51">vx-hooks/src/usePrevious/index.ts:51</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1566,7 +1666,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/47dfbf0/pkgs/vx-hooks/src/useSessionStorageState/index.ts#L16">vx-hooks/src/useSessionStorageState/index.ts:16</a></li>
+									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/fa44797/pkgs/vx-hooks/src/useSessionStorageState/index.ts#L16">vx-hooks/src/useSessionStorageState/index.ts:16</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1615,7 +1715,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/47dfbf0/pkgs/vx-hooks/src/useSet/index.ts#L61">vx-hooks/src/useSet/index.ts:61</a></li>
+									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/fa44797/pkgs/vx-hooks/src/useSet/index.ts#L61">vx-hooks/src/useSet/index.ts:61</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1681,7 +1781,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/47dfbf0/pkgs/vx-hooks/src/useSetRef/index.ts#L35">vx-hooks/src/useSetRef/index.ts:35</a></li>
+									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/fa44797/pkgs/vx-hooks/src/useSetRef/index.ts#L35">vx-hooks/src/useSetRef/index.ts:35</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1733,7 +1833,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/47dfbf0/pkgs/vx-hooks/src/useSize/index.ts#L55">vx-hooks/src/useSize/index.ts:55</a></li>
+									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/fa44797/pkgs/vx-hooks/src/useSize/index.ts#L55">vx-hooks/src/useSize/index.ts:55</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1791,7 +1891,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/47dfbf0/pkgs/vx-hooks/src/useStrongeState/index.ts#L53">vx-hooks/src/useStrongeState/index.ts:53</a></li>
+									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/fa44797/pkgs/vx-hooks/src/useStrongeState/index.ts#L53">vx-hooks/src/useStrongeState/index.ts:53</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1880,7 +1980,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/47dfbf0/pkgs/vx-hooks/src/useThrottle/index.ts#L48">vx-hooks/src/useThrottle/index.ts:48</a></li>
+									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/fa44797/pkgs/vx-hooks/src/useThrottle/index.ts#L48">vx-hooks/src/useThrottle/index.ts:48</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1947,7 +2047,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/47dfbf0/pkgs/vx-hooks/src/useThrottleFn/index.ts#L38">vx-hooks/src/useThrottleFn/index.ts:38</a></li>
+									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/fa44797/pkgs/vx-hooks/src/useThrottleFn/index.ts#L38">vx-hooks/src/useThrottleFn/index.ts:38</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2009,7 +2109,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/47dfbf0/pkgs/vx-hooks/src/useTimeout/index.ts#L36">vx-hooks/src/useTimeout/index.ts:36</a></li>
+									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/fa44797/pkgs/vx-hooks/src/useTimeout/index.ts#L36">vx-hooks/src/useTimeout/index.ts:36</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2051,7 +2151,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/47dfbf0/pkgs/vx-hooks/src/useTimeout/index.ts#L107">vx-hooks/src/useTimeout/index.ts:107</a></li>
+									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/fa44797/pkgs/vx-hooks/src/useTimeout/index.ts#L107">vx-hooks/src/useTimeout/index.ts:107</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2118,7 +2218,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/47dfbf0/pkgs/vx-hooks/src/useToggle/index.ts#L48">vx-hooks/src/useToggle/index.ts:48</a></li>
+									<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/fa44797/pkgs/vx-hooks/src/useToggle/index.ts#L48">vx-hooks/src/useToggle/index.ts:48</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2273,6 +2373,12 @@
 						<a href="../interfaces/vx_hooks.usedebouncefnapi.html" class="tsd-kind-icon">use<wbr>Debounce<wbr>FnAPI</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/vx_hooks.usemutationobserverapi.html" class="tsd-kind-icon">use<wbr>Mutation<wbr>ObserverAPI</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/vx_hooks.usemutationobserveroptions.html" class="tsd-kind-icon">use<wbr>Mutation<wbr>Observer<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="../interfaces/vx_hooks.usetimeloopapi.html" class="tsd-kind-icon">use<wbr>Time<wbr>LoopAPI</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter">
@@ -2295,6 +2401,9 @@
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
 						<a href="vx_hooks.html#targetelement" class="tsd-kind-icon">Target<wbr>Element</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="vx_hooks.html#defaultmutationobserverinit" class="tsd-kind-icon">default<wbr>Mutation<wbr>Observer<wbr>Init</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
 						<a href="vx_hooks.html#curry" class="tsd-kind-icon">curry</a>
@@ -2349,6 +2458,9 @@
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="vx_hooks.html#usemousewheel" class="tsd-kind-icon">use<wbr>Mousewheel</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="vx_hooks.html#usemutationobserver" class="tsd-kind-icon">use<wbr>Mutation<wbr>Observer</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
 						<a href="vx_hooks.html#useprevious" class="tsd-kind-icon">use<wbr>Previous</a>

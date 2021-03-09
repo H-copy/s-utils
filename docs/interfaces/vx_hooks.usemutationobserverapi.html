@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>UseSetRefAPI | s-utils</title>
+	<title>useMutationObserverAPI | s-utils</title>
 	<meta name="description" content="Documentation for s-utils">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -58,10 +58,10 @@
 					<a href="../modules/vx_hooks.html">vx-hooks</a>
 				</li>
 				<li>
-					<a href="vx_hooks.usesetrefapi.html">UseSetRefAPI</a>
+					<a href="vx_hooks.usemutationobserverapi.html">useMutationObserverAPI</a>
 				</li>
 			</ul>
-			<h1>Interface UseSetRefAPI&lt;T&gt;</h1>
+			<h1>Interface useMutationObserverAPI</h1>
 		</div>
 	</div>
 </header>
@@ -71,28 +71,15 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>useSetRef API</p>
+						<p>useMutationObserver API</p>
 					</div>
 				</div>
-			</section>
-			<section class="tsd-panel tsd-type-parameters">
-				<h3>Type parameters</h3>
-				<ul class="tsd-type-parameters">
-					<li>
-						<h4>T</h4>
-						<div class="tsd-comment tsd-typography">
-							<div class="lead">
-								<p>缓存值类型</p>
-							</div>
-						</div>
-					</li>
-				</ul>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">UseSetRefAPI</span>
+						<span class="target">useMutationObserverAPI</span>
 					</li>
 				</ul>
 			</section>
@@ -103,8 +90,9 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vx_hooks.usesetrefapi.html#setstate" class="tsd-kind-icon">set<wbr>State</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vx_hooks.usesetrefapi.html#state" class="tsd-kind-icon">state</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vx_hooks.usemutationobserverapi.html#element" class="tsd-kind-icon">element</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vx_hooks.usemutationobserverapi.html#observer" class="tsd-kind-icon">observer</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vx_hooks.usemutationobserverapi.html#watchstop" class="tsd-kind-icon">watch<wbr>Stop</a></li>
 							</ul>
 						</section>
 					</div>
@@ -113,53 +101,47 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="setstate" class="tsd-anchor"></a>
-					<h3>set<wbr>State</h3>
-					<div class="tsd-signature tsd-kind-icon">set<wbr>State<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
+					<a name="element" class="tsd-anchor"></a>
+					<h3>element</h3>
+					<div class="tsd-signature tsd-kind-icon">element<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Ref</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">HTMLElement</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/fa44797/pkgs/vx-hooks/src/useSetRef/index.ts#L17">vx-hooks/src/useSetRef/index.ts:17</a></li>
+							<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/fa44797/pkgs/vx-hooks/src/useMutationObserver/index.ts#L21">vx-hooks/src/useMutationObserver/index.ts:21</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>值设置</p>
+							<p>绑定元素</p>
 						</div>
-					</div>
-					<div class="tsd-type-declaration">
-						<h4>Type declaration</h4>
-						<ul class="tsd-parameters">
-							<li class="tsd-parameter-signature">
-								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-interface">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-								</ul>
-								<ul class="tsd-descriptions">
-									<li class="tsd-description">
-										<h4 class="tsd-parameters-title">Parameters</h4>
-										<ul class="tsd-parameters">
-											<li>
-												<h5>data: <span class="tsd-signature-type">T</span></h5>
-											</li>
-										</ul>
-										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-									</li>
-								</ul>
-							</li>
-						</ul>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="state" class="tsd-anchor"></a>
-					<h3>state</h3>
-					<div class="tsd-signature tsd-kind-icon">state<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Ref</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="observer" class="tsd-anchor"></a>
+					<h3>observer</h3>
+					<div class="tsd-signature tsd-kind-icon">observer<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Ref</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">MutationObserver</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/fa44797/pkgs/vx-hooks/src/useSetRef/index.ts#L15">vx-hooks/src/useSetRef/index.ts:15</a></li>
+							<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/fa44797/pkgs/vx-hooks/src/useMutationObserver/index.ts#L23">vx-hooks/src/useMutationObserver/index.ts:23</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>缓存值</p>
+							<p>观察对象</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="watchstop" class="tsd-anchor"></a>
+					<h3>watch<wbr>Stop</h3>
+					<div class="tsd-signature tsd-kind-icon">watch<wbr>Stop<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">WatchStopHandle</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/fa44797/pkgs/vx-hooks/src/useMutationObserver/index.ts#L25">vx-hooks/src/useMutationObserver/index.ts:25</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>watch 中断</p>
 						</div>
 					</div>
 				</section>
@@ -180,14 +162,17 @@
 				<ul class="before-current">
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="vx_hooks.usesetrefapi.html" class="tsd-kind-icon">Use<wbr>Set<wbr>RefAPI</a>
+					<li class="current tsd-kind-interface tsd-parent-kind-module">
+						<a href="vx_hooks.usemutationobserverapi.html" class="tsd-kind-icon">use<wbr>Mutation<wbr>ObserverAPI</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="vx_hooks.usesetrefapi.html#setstate" class="tsd-kind-icon">set<wbr>State</a>
+								<a href="vx_hooks.usemutationobserverapi.html#element" class="tsd-kind-icon">element</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="vx_hooks.usesetrefapi.html#state" class="tsd-kind-icon">state</a>
+								<a href="vx_hooks.usemutationobserverapi.html#observer" class="tsd-kind-icon">observer</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="vx_hooks.usemutationobserverapi.html#watchstop" class="tsd-kind-icon">watch<wbr>Stop</a>
 							</li>
 						</ul>
 					</li>

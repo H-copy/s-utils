@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>UseThrottleAPI | s-utils</title>
+	<title>useMutationObserverOptions | s-utils</title>
 	<meta name="description" content="Documentation for s-utils">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -55,13 +55,13 @@
 					<a href="../modules.html">s-utils</a>
 				</li>
 				<li>
-					<a href="../modules/vx_hooks_usethrottle.html">vx-hooks/useThrottle</a>
+					<a href="../modules/vx_hooks.html">vx-hooks</a>
 				</li>
 				<li>
-					<a href="vx_hooks_usethrottle.usethrottleapi.html">UseThrottleAPI</a>
+					<a href="vx_hooks.usemutationobserveroptions.html">useMutationObserverOptions</a>
 				</li>
 			</ul>
-			<h1>Interface UseThrottleAPI&lt;T&gt;</h1>
+			<h1>Interface useMutationObserverOptions</h1>
 		</div>
 	</div>
 </header>
@@ -71,23 +71,15 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>useThrottle API</p>
+						<p>useMutationObserver 参数</p>
 					</div>
 				</div>
-			</section>
-			<section class="tsd-panel tsd-type-parameters">
-				<h3>Type parameters</h3>
-				<ul class="tsd-type-parameters">
-					<li>
-						<h4>T</h4>
-					</li>
-				</ul>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">UseThrottleAPI</span>
+						<span class="target">useMutationObserverOptions</span>
 					</li>
 				</ul>
 			</section>
@@ -98,10 +90,9 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vx_hooks_usethrottle.usethrottleapi.html#cancel" class="tsd-kind-icon">cancel</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vx_hooks_usethrottle.usethrottleapi.html#setstate" class="tsd-kind-icon">set<wbr>State</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vx_hooks_usethrottle.usethrottleapi.html#state" class="tsd-kind-icon">state</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vx_hooks_usethrottle.usethrottleapi.html#watchstop" class="tsd-kind-icon">watch<wbr>Stop</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vx_hooks.usemutationobserveroptions.html#handler" class="tsd-kind-icon">handler</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vx_hooks.usemutationobserveroptions.html#options" class="tsd-kind-icon">options</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="vx_hooks.usemutationobserveroptions.html#target" class="tsd-kind-icon">target</a></li>
 							</ul>
 						</section>
 					</div>
@@ -110,17 +101,17 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="cancel" class="tsd-anchor"></a>
-					<h3>cancel</h3>
-					<div class="tsd-signature tsd-kind-icon">cancel<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
+					<a name="handler" class="tsd-anchor"></a>
+					<h3>handler</h3>
+					<div class="tsd-signature tsd-kind-icon">handler<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>mutationsList<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">MutationRecord</span><span class="tsd-signature-symbol">[]</span>, observer<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">MutationObserver</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/fa44797/pkgs/vx-hooks/src/useThrottle/index.ts#L18">vx-hooks/src/useThrottle/index.ts:18</a></li>
+							<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/fa44797/pkgs/vx-hooks/src/useMutationObserver/index.ts#L15">vx-hooks/src/useMutationObserver/index.ts:15</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>取消一次设值</p>
+							<p>响应回调</p>
 						</div>
 					</div>
 					<div class="tsd-type-declaration">
@@ -128,44 +119,17 @@
 						<ul class="tsd-parameters">
 							<li class="tsd-parameter-signature">
 								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-interface">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-								</ul>
-								<ul class="tsd-descriptions">
-									<li class="tsd-description">
-										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="setstate" class="tsd-anchor"></a>
-					<h3>set<wbr>State</h3>
-					<div class="tsd-signature tsd-kind-icon">set<wbr>State<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/fa44797/pkgs/vx-hooks/src/useThrottle/index.ts#L16">vx-hooks/src/useThrottle/index.ts:16</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>延时值设置函数</p>
-						</div>
-					</div>
-					<div class="tsd-type-declaration">
-						<h4>Type declaration</h4>
-						<ul class="tsd-parameters">
-							<li class="tsd-parameter-signature">
-								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-interface">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>mutationsList<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">MutationRecord</span><span class="tsd-signature-symbol">[]</span>, observer<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">MutationObserver</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 								</ul>
 								<ul class="tsd-descriptions">
 									<li class="tsd-description">
 										<h4 class="tsd-parameters-title">Parameters</h4>
 										<ul class="tsd-parameters">
 											<li>
-												<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">any</span></h5>
+												<h5>mutationsList: <span class="tsd-signature-type">MutationRecord</span><span class="tsd-signature-symbol">[]</span></h5>
+											</li>
+											<li>
+												<h5>observer: <span class="tsd-signature-type">MutationObserver</span></h5>
 											</li>
 										</ul>
 										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -176,32 +140,32 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="state" class="tsd-anchor"></a>
-					<h3>state</h3>
-					<div class="tsd-signature tsd-kind-icon">state<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Ref</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="options" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> options</h3>
+					<div class="tsd-signature tsd-kind-icon">options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">MutationObserverInit</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/fa44797/pkgs/vx-hooks/src/useThrottle/index.ts#L14">vx-hooks/src/useThrottle/index.ts:14</a></li>
+							<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/fa44797/pkgs/vx-hooks/src/useMutationObserver/index.ts#L13">vx-hooks/src/useMutationObserver/index.ts:13</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>延时值</p>
+							<p>观察属性配置</p>
 						</div>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="watchstop" class="tsd-anchor"></a>
-					<h3>watch<wbr>Stop</h3>
-					<div class="tsd-signature tsd-kind-icon">watch<wbr>Stop<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">WatchStopHandle</span></div>
+					<a name="target" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> target</h3>
+					<div class="tsd-signature tsd-kind-icon">target<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Ref</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">HTMLElement</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/fa44797/pkgs/vx-hooks/src/useThrottle/index.ts#L20">vx-hooks/src/useThrottle/index.ts:20</a></li>
+							<li>Defined in <a href="https://github.com/H-copy/s-utils/blob/fa44797/pkgs/vx-hooks/src/useMutationObserver/index.ts#L11">vx-hooks/src/useMutationObserver/index.ts:11</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>中断值监听</p>
+							<p>绑定元素</p>
 						</div>
 					</div>
 				</section>
@@ -214,7 +178,7 @@
 						<a href="../modules.html">Modules</a>
 					</li>
 					<li class="current tsd-kind-module">
-						<a href="../modules/vx_hooks_usethrottle.html">vx-<wbr>hooks/use<wbr>Throttle</a>
+						<a href="../modules/vx_hooks.html">vx-<wbr>hooks</a>
 					</li>
 				</ul>
 			</nav>
@@ -222,28 +186,22 @@
 				<ul class="before-current">
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="vx_hooks_usethrottle.usethrottleapi.html" class="tsd-kind-icon">Use<wbr>ThrottleAPI</a>
+					<li class="current tsd-kind-interface tsd-parent-kind-module">
+						<a href="vx_hooks.usemutationobserveroptions.html" class="tsd-kind-icon">use<wbr>Mutation<wbr>Observer<wbr>Options</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="vx_hooks_usethrottle.usethrottleapi.html#cancel" class="tsd-kind-icon">cancel</a>
+								<a href="vx_hooks.usemutationobserveroptions.html#handler" class="tsd-kind-icon">handler</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="vx_hooks_usethrottle.usethrottleapi.html#setstate" class="tsd-kind-icon">set<wbr>State</a>
+								<a href="vx_hooks.usemutationobserveroptions.html#options" class="tsd-kind-icon">options</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="vx_hooks_usethrottle.usethrottleapi.html#state" class="tsd-kind-icon">state</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="vx_hooks_usethrottle.usethrottleapi.html#watchstop" class="tsd-kind-icon">watch<wbr>Stop</a>
+								<a href="vx_hooks.usemutationobserveroptions.html#target" class="tsd-kind-icon">target</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../modules/vx_hooks_usethrottle.html#usethrottle" class="tsd-kind-icon">use<wbr>Throttle</a>
-					</li>
 				</ul>
 			</nav>
 		</div>
