@@ -1,6 +1,7 @@
 // import { mount } from '@vue/test-utils'
-// import { ref } from 'vue'
+// import { onMounted, ref } from 'vue'
 // import { useSize } from '../index'
+// import { dely } from '../../_utils'
 
 describe('useSize', () => {
 
@@ -16,6 +17,13 @@ describe('useSize', () => {
     //       height: '10px'
     //     })
     //     const { state, element } = useSize()
+
+    //     onMounted(() => {
+    //       console.log('render >>>', 
+    //       element.value,
+    //       element.value?.style?.width,
+    //     )
+    //     })
     //     return {
     //       state,
     //       element,
@@ -23,7 +31,14 @@ describe('useSize', () => {
     //     }
     //   }
     // }
-    // const warp = await mount(cmp, { attachTo: document.body })
+    // const warp = mount(cmp, { attachTo: document.body })
+    // const box = warp.find('#box')
+    // await box.trigger('click')
+    // await dely(1)
+    // expect(warp.vm.element).not.toBeUndefined()
+    // expect(warp.vm.state.width).toBe(10)
+    // expect(warp.vm.state.height).toBe(10)
+    
   })
 
   // test('set element', () => {

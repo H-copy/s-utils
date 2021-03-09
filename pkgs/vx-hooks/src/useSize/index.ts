@@ -3,8 +3,20 @@
  * @packageDocumentation
  * @module vx-hooks/useSize
  */
-import ResizeObserver from 'resize-observer-polyfill';
-import { ref, watch, Ref, WatchStopHandle } from 'vue'
+// import ResizeObserver from 'resize-observer-polyfill';
+import { useMutationObserver } from '../useMutationObserver'
+import { ref, Ref, watch, WatchStopHandle } from 'vue'
+
+export interface SizeOptions{
+  width?: number;
+  height?: number;
+  clientWidth?: number;
+  clientHeight?: number;
+  offsetWidth?: number;
+  offsetHeight?: number;
+  scrollWidth?: number;
+  scrollHeight?: number;
+}
 
 /** useSize API */
 export interface UseSizeAPI {
@@ -14,8 +26,14 @@ export interface UseSizeAPI {
   element: Ref<HTMLElement | undefined>;
   /** 尺寸值 */
   state: Ref<{
-    width: number;
-    height: number;
+    width?: number;
+    height?: number;
+    clientWidth?: number;
+    clientHeight?: number;
+    offsetWidth?: number;
+    offsetHeight?: number;
+    scrollWidth?: number;
+    scrollHeight?: number;
   }>;
 }
 
@@ -34,45 +52,56 @@ export interface UseSizeAPI {
  * 
  * ```
  */
-export function useSize(target?: Ref<HTMLElement | undefined>): UseSizeAPI {
-  const element = target ? target : ref(target) as Ref<HTMLMapElement | undefined>
+export function useSize(target?: Ref<HTMLElement | undefined>) {
 
   const state = ref({
     width: 0,
-    height: 0
+    height: 0,
+    clientWidth: 0,
+    clientHeight: 0,
+    offsetWidth: 0,
+    offsetHeight: 0,
+    scrollWidth: 0,
+    scrollHeight: 0,
   })
 
-  const updateState = (width = 0, height = 0) => {
+  const updateState = (target: HTMLElement) =>{
+
     state.value = {
-      width,
-      height
+      width: target.scrollWidth || target.offsetWidth,
+      height: target.scrollHeight || target.offsetHeight,
+      clientWidth: target.clientWidth,
+      clientHeight: target.clientHeight,
+      offsetWidth: target.offsetWidth,
+      offsetHeight: target.offsetHeight,
+      scrollWidth: target.scrollWidth,
+      scrollHeight: target.scrollHeight,
     }
   }
 
-  const resizeObserver = ref<any>(null)
-  const watchStop = watch(element, () => {
-
-    // 解绑旧数据
-    if (resizeObserver.value) { resizeObserver.value.disconnect() }
-    if (!element.value) return
-
-    const { scrollWidth, scrollHeight } = element.value
-    updateState(scrollWidth, scrollHeight)
-
-    // 缓存新绑定
-    resizeObserver.value = new ResizeObserver((entries: any) => {
-      entries.forEach((entry: any) => {
-        updateState(entry.target.scrollWidth, entry.target.scrollHeight)
-      })
+  const handler = (mutationsList: MutationRecord[]) =>{
+    mutationsList.map((item: MutationRecord) => {
+      const target = item.target as HTMLElement
+      updateState(target)
     })
-    resizeObserver.value.observe(element.value);
+  }
+
+  const options = { attributeFilter: ['style'] }
+  const setting = target ? {target, handler, options} : {handler, options}
+  const { element, observer, watchStop } =  useMutationObserver(setting)
+
+  watch(element, () => {
+    console.log('change', element.value)
+    if(element.value){
+      updateState(element.value)
+    }
   }, { immediate: true })
-
-
+  
 
   return {
     watchStop,
     element,
     state,
+    observer
   }
 }
