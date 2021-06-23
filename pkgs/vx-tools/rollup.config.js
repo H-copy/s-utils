@@ -1,10 +1,12 @@
 import path from 'path'
-import resolve from 'rollup-plugin-node-resolve' // 依赖引用插件
-import commonjs from 'rollup-plugin-commonjs' // commonjs模块转换插件
-import { eslint } from 'rollup-plugin-eslint' // eslint插件
-import ts from 'rollup-plugin-typescript2'
-const getPath = _path => path.resolve(__dirname, _path)
 import packageJSON from './package.json'
+import pluginResolve from '@rollup/plugin-node-resolve' // 依赖引用插件
+import pluginCommonjs from '@rollup/plugin-commonjs' // commonjs模块转换插件
+import pluginEslint from '@rollup/plugin-eslint' // eslint插件
+import pluginTypescript2 from 'rollup-plugin-typescript2'
+import pluginTerser from 'rollup-plugin-terser'
+
+const getPath = _path => path.resolve(__dirname, _path)
 
 const extensions = [
   '.js',
@@ -12,38 +14,48 @@ const extensions = [
   '.tsx'
 ]
 
-const tsPlugin = ts({
-  tsconfig: getPath('./tsconfig.json'),
-  extensions
-})
-
-const esPlugin = eslint({
+const eslintConf = {
   throwOnError: true,
-  include: ['src/**/*.ts'],
+  include: ['src/**'],
   exclude: ['node_modules/**', 'lib/**']
-})
-
-const commonConf = {
-  input: getPath('./src/index.ts'),
-  plugins:[
-    resolve(extensions),
-    commonjs(),
-    esPlugin,
-    tsPlugin,
-  ]
 }
 
-const outputMap = [
-  {
+const  mini = {
+  input: getPath('./src/index.ts'),
+  plugins:[
+    pluginEslint(eslintConf),
+    pluginResolve(extensions),
+    pluginCommonjs(),
+    pluginTypescript2({
+      tsconfig: getPath('./tsconfig.mini.json'),
+      extensions
+    }),
+    pluginTerser.terser()
+  ],
+  output:{
+    name: packageJSON.name,
     file: packageJSON.main,
-    format: 'umd',
-  },
-  {
-    file: packageJSON.module,
-    format: 'es',
+    format: 'umd'
   }
-]
+}
 
-const buildConf = options => Object.assign({}, commonConf, options)
 
-export default outputMap.map(output => buildConf({ output: {name: packageJSON.name, ...output} }) )
+const esm = {
+  input: getPath('./src/index.ts'),
+  plugins:[
+    pluginEslint(eslintConf),
+    pluginResolve(extensions),
+    pluginCommonjs(),
+    pluginTypescript2({
+      tsconfig: getPath('./tsconfig.json'),
+      extensions
+    })
+  ],
+  output:{
+    name: packageJSON.name,
+    file: packageJSON.module,
+    format: 'esm'
+  }
+}
+
+export default [mini, esm]
