@@ -64,6 +64,9 @@
   "peerDependencies": {
     "vue": ">=3.0.0"
   },
+  "sideEffects": [
+    "lib/_utils/*"
+  ],
   "author": "copy-left",
   "license": "MIT",
   "bugs": {
