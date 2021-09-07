@@ -7,34 +7,34 @@
  * -----------------
  * 
  * ### State
- * - useToggle
- * - useBool
- * - useMap
- * - useSet
- * - useTimeout
- * - useSetRef
- * - usePrevious
- * - useCounter
+ * - useToggle 开关值切换
+ * - useBool 布尔值切换
+ * - useMap Map操作
+ * - useSet Set操作
+ * - useTimeout 延时
+ * - useSetRef dom对象获取
+ * - usePrevious 值缓存
+ * - useCounter 计数器
  * 
  * ### SideEffect
- * - useDebounce
- * - useDebounceFn
- * - useThrottle
- * - useThrottleFn
+ * - useDebounce 值防抖
+ * - useDebounceFn 函数防抖
+ * - useThrottle 值节流
+ * - useThrottleFn 函数节流
  * 
  * ### Cache
- * - useStrongeState
+ * - useStrongeState 本地缓存
  * - useLocalStorageState
  * - useSessionStorageState
  * 
  * ### Dom
- * - useMousewheel
- * - useClickAway
- * - useDrop
- * - useHover
- * - useMouse
- * - useSize
- * - useMutationObserver
+ * - useMousewheel 鼠标滚轮滑动监听
+ * - useClickAway 外部点击
+ * - useDrop 拖拽
+ * - useHover 划入
+ * - useMouse 鼠标移动
+ * - useSize dom尺寸变化
+ * - useMutationObserver 元素属性监听
  * 
  * @packageDocumentation
  * @module vx-hooks
